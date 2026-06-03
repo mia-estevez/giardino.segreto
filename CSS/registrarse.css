@@ -64,5 +64,5 @@ header{
 
 .menu-toggle:hover{
     background-color: brown;
-    
+    display: flex;
 }
