@@ -1,0 +1,14 @@
+.titulo {
+    text-align: center;
+    font-size: 3rem;
+    color: chartreuse;
+    font-weight: bold;
+    margin-bottom: 20%;
+}
+
+.subtitulos-cuidados {
+    font-size: 2rem;
+    color: aqua;
+    margin-top: auto;
+    margin-bottom: 20%;
+}
