@@ -1,0 +1,67 @@
+
+
+.h2 {
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(255, 68, 0);
+    font-weight:bolder;
+    margin-bottom: 5%;
+}
+
+.consejof ul{
+    text-align: center;
+}
+
+.consejof ol{
+    text-align: left;
+}
+
+
+
+body{
+    background: #fff8f5;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.titulo{
+    text-align: center;
+    font-size: 2rem;
+    color: #4f6f52;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.subtitulo-cuidado{
+    text-align: center;
+    font-size: 1.8rem;
+    color: #d17b88;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+
+.consejo-flor{
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.consejo-flor h3{
+    color: #c06c84;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.consejo-flor p{
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
