@@ -3,6 +3,7 @@
 }
 body{
     background-color: rgba(159, 175, 147, 0.8);
+    margin: 0%;
 }
 
 .reg-franja{
@@ -11,8 +12,14 @@ body{
     color: rgb(255, 255, 255);
     padding: 7% ;
     margin: 5% auto;
-    max-width: 30%;
+    width: clamp(100px, 300px, 500px);
+    
     text-align: center;
+    min-block-size: 50%;
+}
+
+#boton{
+    color: rgb(216, 112, 147);
 }
 
 input, textarea {
@@ -24,22 +31,44 @@ input, textarea {
     box-sizing: border-box;
 }
 
+header{
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    margin: 0%;
+    height: 4%;
+    background-color: rgb(216, 112, 147);
+    border-bottom: 2px solid rgb(199, 97, 131);
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    color: rgb(36, 32, 32);
+    justify-content: right;
+}
+
+.menu {
+    display: block;
+}
+
 .nav-menu {
-    display: none;
-    list-style: none;
+    display: block;
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 100%;  
-    right: 0;    
-    background: rgba(180, 9, 115, 0.9);
+    right: 0;
+    top: 100%;   
+    background: rgba(180, 63, 141, 0.9);
     border-radius: 10px;
     width: 180px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    flex-direction: column;
     gap: 10px;
-    justify-content: center;
-    text-align: center;
 }
 
 .nav-menu li a {
@@ -51,37 +80,30 @@ input, textarea {
     border-radius: 5px;
 }
 
-.nav-menu li a:checked {
+.nav-menu li a:hover {
     background-color: rgba(240, 240, 200, 0.2);
 }
 
-#menu-toggle{
+.menu:hover .submenu{
+    display: block;
+}
+
+.submenu{
     display: none;
 }
 
-header{
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2%;
-    height: 4%;
-    background-color: rgba(233, 134, 195, 0.9);
-    border-bottom: 2px solid rgb(128, 48, 128);
+.li1{
+    list-style: none;
 }
 
-.menu-toggle{
-    display: none;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 3%;
-    border-radius: 6%;
-    user-select: none;
+.li2{
+ list-style: none;   
+}
+h1{
+    font-size: 2rem;
+    letter-spacing: 4px;
 }
 
-.menu-toggle:hover{
-    background-color: brown;
-    display: flex;
+span{
+    color: white;
 }
