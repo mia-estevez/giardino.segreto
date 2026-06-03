@@ -5,6 +5,16 @@ body{
     background-color: rgba(159, 175, 147, 0.8);
 }
 
+.reg-franja{
+    background-color: rgb(231, 146, 175);
+    border-radius: 30%;
+    color: rgb(255, 255, 255);
+    padding: 15%;
+    margin: 5% auto;
+    max-width: 30%;
+    text-align: center;
+}
+
 .nav-menu {
     display: none;
     list-style: none;
