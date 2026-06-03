@@ -9,10 +9,19 @@ body{
     background-color: rgb(231, 146, 175);
     border-radius: 30%;
     color: rgb(255, 255, 255);
-    padding: 15%;
+    padding: 7% ;
     margin: 5% auto;
     max-width: 30%;
     text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .nav-menu {
