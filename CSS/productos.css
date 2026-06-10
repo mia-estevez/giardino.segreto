@@ -1,0 +1,55 @@
+body{
+    background: linear-gradient(to bottom, #fff8f5, #ffeef2);
+    font-family: Georgia, serif;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 2rem;
+    color: #4f6f52;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.categoria{
+    text-align: center;
+    color: #c06c84;
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.producto{
+    width: 75%;
+    margin: 25px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.producto:hover{
+    transform: scale(1.03);
+}
+
+.producto h3{
+    color: #d17b88;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.producto p{
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
