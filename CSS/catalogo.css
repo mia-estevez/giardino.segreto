@@ -96,3 +96,59 @@ h1{
     justify-content: center;
     color: rgb(250, 250, 250);
 }
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+h1{
+    text-align: center;
+    color: rgb(250, 250, 250);
+}
+
+#btnAgregar{
+    background-color:rgb(231, 146, 175);
+    color: white;
+    border-radius: 10%;
+    border: rgb(216, 112, 147);
+    border-bottom: 2px solid rgb(216, 112, 147);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th{
+    background-color: rgb(231, 146, 175);
+    color: white;
+    padding: 12px;
+}
+
+td{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.editar{
+    background-color: rgb(231, 146, 175);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.eliminar{
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
