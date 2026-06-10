@@ -113,3 +113,10 @@ h1{
 span{
     color: rgb(250, 250, 250);
 }
+
+footer{
+    background-color: rgb(231, 146, 175);
+    color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: center;
+}

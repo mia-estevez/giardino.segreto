@@ -108,3 +108,10 @@ h1{
     text-align: center;
     min-block-size: 50%;
 }
+
+footer{
+    background-color: rgb(231, 146, 175);
+    color: rgb(250, 250, 250);
+    display: flex;
+    justify-content: center;
+}
