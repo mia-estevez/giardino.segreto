@@ -140,15 +140,19 @@ td{
 .editar{
     background-color: rgb(231, 146, 175);
     color: white;
-    border: none;
+    border: rgb(216, 112, 147);
+    border-radius: 10%;
+    border-bottom: 2px solid rgb(216, 112, 147);
     padding: 6px 10px;
     cursor: pointer;
 }
 
 .eliminar{
-    background-color: crimson;
+    background-color: rgb(155, 12, 41);
     color: white;
-    border: none;
+    border: rgb(124, 12, 12);
+    border-radius: 10%;
+    border-bottom: 2px solid rgb(124, 12, 12);
     padding: 6px 10px;
     cursor: pointer;
 }
