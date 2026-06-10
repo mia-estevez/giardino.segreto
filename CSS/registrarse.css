@@ -40,8 +40,8 @@ header{
     padding: 2%;
     margin: 0%;
     height: 4%;
-    background-color: rgb(216, 112, 147);
-    border-bottom: 2px solid rgb(199, 97, 131);
+    background-color: rgb(231, 146, 175);
+    border-bottom: 2px solid rgb(216, 112, 147);
 }
 
 .menu-toggle {
@@ -65,7 +65,7 @@ header{
     position: absolute;
     right: 0;
     top: 100%;   
-    background: rgba(180, 63, 141, 0.9);
+    background: rgb(216, 112, 147);
     border-radius: 10px;
     width: 180px;
     gap: 10px;
@@ -74,7 +74,7 @@ header{
 .nav-menu li a {
     display: block;
     padding: 10px;
-    color: rgb(240, 240, 200);
+    color: rgb(250, 250, 250);
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -92,12 +92,18 @@ header{
     display: none;
 }
 
+.enviar{
+    color: rgb(231, 146, 175);
+}
+
 .li1{
     list-style: none;
 }
 
 .li2{
- list-style: none;   
+ list-style: none;
+ display: flex;
+ flex-direction: row;   
 }
 h1{
     font-size: 2rem;
@@ -105,5 +111,5 @@ h1{
 }
 
 span{
-    color: white;
+    color: rgb(250, 250, 250);
 }
