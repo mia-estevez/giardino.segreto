@@ -7,8 +7,8 @@ $conexion = new mysqli(
     "floreria"
 );
 
-if($conexion->connect_error){
-    die("Error de conexión");
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
 }
 
 ?>
