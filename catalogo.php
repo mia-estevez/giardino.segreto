@@ -1,3 +1,9 @@
+<?php
+require_once("PHP/conexion.php");
+
+echo "Conexión exitosa";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,6 +55,20 @@
                     <th>Stock</th>
                     <th>Acciones</th>
                 </tr>
+                
+                <?php while($p = $resultado->fetch_assoc()){ ?>
+                <tr>
+                    <td><?= $p['nombre'] ?></td>
+                    <td>$<?= $p['precio'] ?></td>
+                    <td><?= $p['stock'] ?></td>
+                    <td><a href="editar.php?id=<?= $p['id'] ?>">
+                        <button>Actualizar</button></a>
+                        <a href="eliminar.php?id=<?= $p['id'] ?>">
+                        <button>Eliminar</button></a>
+                    </td>
+                </tr>
+                <?php } ?>
+
             </thead>
             <tbody id="tablaProductos">
             </tbody>

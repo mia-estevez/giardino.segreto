@@ -8,3 +8,9 @@ CREATE TABLE productos (
     precio DECIMAL(10,2),
     stock INT
 );
+
+INSERT INTO productos (nombre, precio, stock)
+VALUES
+('Ramo de rosas', 15000, 12),
+('Tulipanes', 12000, 8),
+('Orquídeas', 20000, 5);
