@@ -1,0 +1,72 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #fdf8f4, #f7efe7);
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+
+.nosotros{
+    padding: 80px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nosotros-contenido{
+    max-width: 900px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 2px solid #e8d9c8;
+}
+
+.nosotros-contenido::before{
+    content: "🌸 Giardino Segreto 🌸";
+    display: block;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #b56b8a;
+    margin-bottom: 25px;
+}
+
+.nosotros-contenido p{
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.05rem;
+}
+
+.nosotros-contenido p:first-child{
+    font-weight: 500;
+}
+
+.nosotros-contenido:hover{
+    transform: translateY(-5px);
+    transition: 0.4s ease;
+    box-shadow: 0 12px 30px rgba(181, 107, 138, 0.15);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .nosotros{
+        padding: 50px 20px;
+    }
+
+    .nosotros-contenido{
+        padding: 25px;
+    }
+
+    .nosotros-contenido::before{
+        font-size: 1.6rem;
+    }
+}
