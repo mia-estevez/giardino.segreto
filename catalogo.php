@@ -1,9 +1,7 @@
 <?php
 include("php/conexion.php");
-
-$resultado = $conexion->query(
-    "SELECT * FROM productos"
-);
+require_once("PHP/conexion.php");
+echo "Conexión exitosa";
 ?>
 
 <!DOCTYPE html>
