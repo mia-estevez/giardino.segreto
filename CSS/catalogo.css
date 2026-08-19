@@ -175,3 +175,58 @@ footer{
     display: flex;
     justify-content: center;
 }
+/* --- Botones de la Tabla (Acciones) --- */
+.btn-accion {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: 2px;
+}
+
+/* Botón Actualizar (Tono suave/rosado acorde al diseño) */
+.btn-actualizar {
+    background-color: #e792af;
+    color: white;
+}
+
+.btn-actualizar:hover {
+    background-color: #d17b88;
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 8px rgba(209, 123, 136, 0.4);
+}
+
+/* Botón Eliminar (Rojo terracota suave para dar advertencia sin romper la estética) */
+.btn-eliminar {
+    background-color: #d9534f;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #c9302c;
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 8px rgba(201, 48, 44, 0.4);
+}
+
+/* Opcional: Estilo para el botón de Agregar Producto */
+#btnAgregar, .btn-agregar {
+    display: inline-block;
+    background-color: #e792af;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 15px;
+    transition: background 0.3s ease;
+}
+
+#btnAgregar:hover, .btn-agregar:hover {
+    background-color: #d17b88;
+}
