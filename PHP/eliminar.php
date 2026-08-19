@@ -1,11 +1,12 @@
 <?php
-
 include("conexion.php");
 
-$id = $_GET['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $conexion->query("DELETE FROM productos WHERE id=$id");
+}
 
-$conexion->query(
-    "DELETE FROM productos WHERE id=$id"
-);
-
-header("Location: catalogo.php");
+// Redirección corregida subiendo un nivel de carpeta
+header("Location: ../catalogo.php");
+exit();
+?>
