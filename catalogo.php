@@ -69,11 +69,11 @@ $resultado = $conexion->query($sql);
                     <td>$<?= $p['precio'] ?></td>
                     <td><?= $p['stock'] ?></td>
                     <td>
-                        <a href="PHP/editar.php?id=<?= $p['id'] ?>">
-                            <button>Actualizar</button>
+                        <a href="PHP/editar.php?id=<?= $p['id'] ?>" class="btn-accion btn-actualizar">
+                            Actualizar
                         </a>
-                        <a href="PHP/eliminar.php?id=<?= $p['id'] ?>">
-                            <button>Eliminar</button>
+                        <a href="PHP/eliminar.php?id=<?= $p['id'] ?>" class="btn-accion btn-eliminar" onclick="return confirm('¿Seguro que deseas eliminar este producto?')">
+                            Eliminar
                         </a>
                     </td>
                 </tr>
