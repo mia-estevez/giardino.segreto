@@ -27,12 +27,12 @@
 
 .nosotros-contenido{
     max-width: 900px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 174, 174, 0.8);
     backdrop-filter: blur(8px);
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    border: 2px solid #e8d9c8;
+    border: 2px solid #ffe0bc;
 }
 
 .nosotros-contenido::before{
@@ -73,12 +73,12 @@
 
 .objetivos-contenido{
     max-width: 900px;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 174, 174, 0.8);
     backdrop-filter: blur(8px);
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    border: 2px solid #e8d9c8;
+    border: 2px solid #ffe0bc;
 }
 
 .objetivos-contenido::before{
