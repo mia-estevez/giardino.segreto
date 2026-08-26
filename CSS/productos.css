@@ -177,83 +177,66 @@ footer{
 /*pack romantico*/
 /* Transición suave para la tarjeta al expandirse */
 
-
-/* Transición suave para la tarjeta al expandirse */
+/* Contenedor principal del producto */
 .producto {
     overflow: hidden;
     transition: transform 0.3s ease, max-height 0.5s ease;
 }
 
-/* Ocultar el contenido extra por defecto */
+/* Encabezado y texto superior */
+.producto h3 {
+    color: #c97382;
+    margin-bottom: 8px;
+}
+
+.producto p {
+    color: #4a4a4a;
+    margin-bottom: 12px;
+}
+
+/* Ocultar la sección de fotos por defecto */
 .producto-extra {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.4s ease 0.1s, margin-top 0.3s ease;
     margin-top: 0;
-}
-
-/* Mostrar contenido al hacer hover */
-.producto:hover .producto-extra {
-    max-height: 800px;
-    opacity: 1;
-    margin-top: 15px;
-}
-
-/* Grilla para las 3 fotos horizontales */
-.image-gallery {
+    
+    /* Configuración de la grilla para colocar las 3 imágenes horizontales */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     width: 100%;
-    margin-bottom: 15px;
 }
 
-/* Estilo individual de las 3 imágenes */
-.gallery-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* Estilo del texto promocional rosa al final */
-.texto-promo {
-    font-weight: bold;
-    color: #d17b88 !important;
-    text-align: center;
-    margin-top: 10px;
-}
-/* Estilos de la imagen desplegada */
-/*.img-promo {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-top: 10px;
-}
-
-/* Estilo del texto promocional extra */
-/*
-.texto-promo {
-    font-weight: bold;
-    color: #d17b88 !important;
-    margin-top: 10px;
-}
-
-
+/* Al hacer hover, desplegar las imágenes */
 .producto:hover .producto-extra {
     max-height: 800px;
     opacity: 1;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-.img-promo {
-    width: auto;             
-    max-width: 100%;         
-    max-height: 300px;       
-    display: block;          
-    margin: 10px auto;       
-    object-fit: contain;     
+/* Cada contenedor individual de imagen */
+.producto-extra .img {
+    width: 100%;
+    overflow: hidden;
     border-radius: 12px;
-} */
+}
+
+/* Estilo de la etiqueta <img> */
+.img-promo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Texto rosa en la parte inferior */
+.texto-promo {
+    font-weight: bold;
+    color: #c97382 !important;
+    text-align: center;
+    margin-top: 15px;
+}
