@@ -258,18 +258,23 @@ body{
 }
 
 /* Títulos principales */
-.titulo{
-    text-align: center;
+.titulo {
+    background-color: rgb(231, 146, 175);
     color: #5f7a61;
-    font-size: 2rem;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    border-radius: 30%; 
+    border-bottom: 2px solid rgb(216, 112, 147);
+    padding: 15px 40px;
+    margin: 30px auto;
+    width: fit-content;
+    max-width: 90%;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
-.titulo h1{
-    font-size: 4rem;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+.titulo h1 {
+    font-size: 2rem; 
+    margin: 0;
+    letter-spacing: 4px;
 }
 
 /* Introducción */
