@@ -25,6 +25,7 @@ header{
     margin: 0%;
     height: 4%;
     background-color: rgb(231, 146, 175);
+/*    background-color: rgba(46, 75, 41, 1.0);*/
     border-bottom: 2px solid rgb(216, 112, 147);
 }
 
@@ -156,18 +157,6 @@ footer{
     font-size: 1.1rem;
 }
 
-header{
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2%;
-    margin: 0%;
-    height: 4%;
-    background-color: rgb(231, 146, 175);
-    border-bottom: 2px solid rgb(216, 112, 147);
-}
 
 .menu{
     position: relative;
@@ -375,3 +364,9 @@ footer{
     margin: 0 auto;
 }
 
+#foto {
+    max-height: 100px; 
+    width: auto;     
+    border-radius: 100%;
+    object-fit: contain;
+}
