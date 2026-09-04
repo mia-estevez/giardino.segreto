@@ -120,11 +120,11 @@ footer{
     display: flex;
     justify-content: center;
 }
+
 #foto {
     max-height: 100px; 
     width: auto;     
     border-radius: 100%;
     object-fit: contain;
-    border-style: solid rgb(216, 112, 147);
     border: 2px solid rgb(216, 112, 147);
 }

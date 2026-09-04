@@ -241,3 +241,11 @@ footer{
     text-align: center;
     margin-top: 15px;
 }
+
+#foto {
+    max-height: 100px; 
+    width: auto;     
+    border-radius: 100%;
+    object-fit: contain;
+    border: 2px solid rgb(216, 112, 147);
+}

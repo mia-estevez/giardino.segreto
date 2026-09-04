@@ -115,3 +115,11 @@ span{
     border-radius:15px;
     box-shadow:0 4px 10px rgba(0,0,0,.08);
 }
+
+#foto {
+    max-height: 100px; 
+    width: auto;     
+    border-radius: 100%;
+    object-fit: contain;
+    border: 2px solid rgb(216, 112, 147);
+}

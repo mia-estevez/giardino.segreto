@@ -197,3 +197,11 @@ footer{
     transition: 0.4s ease;
     box-shadow: 0 12px 30px rgba(181, 107, 138, 0.15);
 }
+
+#foto {
+    max-height: 100px; 
+    width: auto;     
+    border-radius: 100%;
+    object-fit: contain;
+    border: 2px solid rgb(216, 112, 147);
+}
