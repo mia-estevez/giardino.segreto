@@ -31,12 +31,7 @@ $resultado = $conexion->query($sql);
                         </ul>
                     </li>
                     <li class="li1"><a href="registrarse.html">Registrarse</a></li>
-                    <li class="li1"><a href="productos.html">Productos</a>
-                        <ul>
-                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="promo.html">Promo</a></li>
-                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="especial.html">Ediciones especiales</a></li>
-                        </ul>
-                    </li>
+                    <li class="li1"><a href="productos.html">Productos</a></li>
                     <li class="li1"><a href="favoritos.html">Favoritos</a></li>
                     <li class="li1"><a href="catalogo.php">Catalogo</a></li>
                     <li class="li1"><a href="carrito.html">Carrito</a></li>
