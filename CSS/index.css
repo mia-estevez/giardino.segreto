@@ -16,12 +16,14 @@ header{
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 2%;
+   /* padding: 2%;*/
     margin: 0%;
     height: 4%;
     background-color: rgb(231, 146, 175);
     border-bottom: 2px solid rgb(216, 112, 147);
+    justify-content: center; 
+    position: relative;      
+    padding: 10px 20px;
 }
 
 .menu{
@@ -198,7 +200,23 @@ footer{
     box-shadow: 0 12px 30px rgba(181, 107, 138, 0.15);
 }
 
+/*#foto {
+    max-height: 100px;
+    width: 100%;            
+    max-width: 280px;       
+    border-radius: 8px;
+    object-fit: contain;     
+    border: 2px solid rgb(216, 112, 147);
+    padding: 8px 16px;      
+    display: block;
+    margin: 0 auto;
+}
+
+ Contenedor del logo (si usas un div alrededor de la imagen) */
+
 #foto {
+    display: block;
+    margin: 0 auto;        /* Mantiene el logo centrado */
     max-height: 100px; 
     width: auto;     
     border-radius: 100%;
