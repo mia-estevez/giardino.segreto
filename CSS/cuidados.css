@@ -371,3 +371,12 @@ img {
     justify-content: center;
 
 }
+
+/* Hace que todas las imágenes respeten el ancho de su contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
