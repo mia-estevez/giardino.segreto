@@ -1,0 +1,29 @@
+{
+  "name": "giardino.segreto",
+  "version": "1.0.0",
+  "description": "Sistema de una floreria, donde se podran comprar ramos de flores personalizados. Además se tendra asesoramiento de como cuidar las flores, entre otras cosas.",
+  "keywords": [
+    "flores",
+    "ramos",
+    "asesoramiento."
+  ],
+  "homepage": "https://github.com/mia-estevez/giardino.segreto#readme",
+  "bugs": {
+    "url": "https://github.com/mia-estevez/giardino.segreto/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mia-estevez/giardino.segreto.git"
+  },
+  "license": "ISC",
+  "author": "Mía Estevez, Aros Agustina y Fuentes Aixa",
+  "type": "commonjs",
+  "main": "  ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.3.0"
+  }
+}
