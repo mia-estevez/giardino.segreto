@@ -127,3 +127,156 @@ footer{
     object-fit: contain;
     border: 2px solid rgb(216, 112, 147);
 }
+
+
+/* TABLA DE PRODUCTOS */
+
+.catalogo-productos {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+    flex: 1;
+}
+
+.catalogo-productos h2 {
+    color: rgb(117, 66, 31);
+    text-align: center;
+    font-family: Georgia, serif;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    background-color: rgb(255, 250, 250);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+.tabla-productos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.tabla-productos thead {
+    background-color: rgb(231, 146, 175);
+    color: rgb(250, 250, 250);
+}
+
+.tabla-productos th {
+    padding: 15px;
+    font-family: Georgia, serif;
+    letter-spacing: 1px;
+}
+
+.tabla-productos td {
+    padding: 13px;
+    color: rgb(117, 66, 31);
+    border-bottom: 1px solid rgb(240, 205, 215);
+}
+
+.tabla-productos tbody tr:hover {
+    background-color: rgba(231, 146, 175, 0.15);
+}
+
+/* BOTONES DE ACCIONES */
+
+.btn-editar {
+    background-color: rgb(231, 146, 175);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.btn-eliminar {
+    background-color: rgb(117, 66, 66);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+.btn-editar:hover,
+.btn-eliminar:hover {
+    opacity: 0.8;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 768px) {
+    .catalogo-productos {
+        width: 95%;
+    }
+
+    .tabla-productos {
+        min-width: 650px;
+    }
+}
+/* BOTÓN AGREGAR PRODUCTO */
+
+.acciones-catalogo {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btn-mostrar-formulario {
+    background-color: rgb(216, 112, 147);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* FORMULARIO */
+
+.formulario-producto {
+    width: 90%;
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: rgb(255, 250, 250);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+}
+
+.formulario-producto h2 {
+    text-align: center;
+    color: rgb(117, 66, 31);
+}
+
+.formulario-producto label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(117, 66, 31);
+}
+
+.formulario-producto input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid rgb(216, 112, 147);
+    border-radius: 6px;
+}
+
+.formulario-producto button {
+    background-color: rgb(231, 146, 175);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 4px;
+}
