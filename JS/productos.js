@@ -1,3 +1,4 @@
+
 const contenedorProductos = document.getElementById("contenedor-productos");
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));
@@ -19,7 +20,7 @@ async function mostrarProductos() {
 
         const productos = await resultado.json();
 
-        // CONSULTAR FAVORITOS DEL USUARIO
+        // CONSULTAR FAVORITOS
         let favoritos = [];
 
         if (usuario && usuario.rol === "comprador") {
@@ -52,6 +53,7 @@ async function mostrarProductos() {
             const tarjeta = document.createElement("div");
             tarjeta.classList.add("card-variedad");
 
+            // VERIFICAR SI ES FAVORITO
             const esFavorito = favoritos.some(
                 favorito => Number(favorito.id) === Number(producto.id)
             );
@@ -94,9 +96,7 @@ async function mostrarProductos() {
                         const datos = await respuesta.json();
 
                         if (!respuesta.ok) {
-                            throw new Error(
-                                datos.error || "No se pudo quitar el favorito"
-                            );
+                            throw new Error(datos.error || "No se pudo quitar el favorito");
                         }
 
                         botonFavorito.classList.remove("favorito-activo");
@@ -123,9 +123,7 @@ async function mostrarProductos() {
                         const datos = await respuesta.json();
 
                         if (!respuesta.ok) {
-                            throw new Error(
-                                datos.error || "No se pudo guardar el favorito"
-                            );
+                            throw new Error(datos.error || "No se pudo guardar el favorito");
                         }
 
                         botonFavorito.classList.add("favorito-activo");
@@ -158,13 +156,11 @@ async function mostrarProductos() {
 
             const precio = document.createElement("span");
             precio.classList.add("precio-producto");
-
             precio.textContent =
                 `$${Number(producto.precio).toLocaleString("es-AR")}`;
 
             const stock = document.createElement("span");
             stock.classList.add("stock-producto");
-
             stock.textContent = `${producto.stock} disponibles`;
 
             informacion.appendChild(precio);
@@ -175,12 +171,57 @@ async function mostrarProductos() {
             contenido.appendChild(descripcion);
             contenido.appendChild(informacion);
 
-            // BOTÓN CARRITO
-            const botonCarrito = document.createElement("a");
+            // BOTÓN AGREGAR AL CARRITO
+            const botonCarrito = document.createElement("button");
 
-            botonCarrito.href = "carrito.html";
+            botonCarrito.type = "button";
             botonCarrito.classList.add("btn-consultar-chico");
             botonCarrito.textContent = "Agregar al Carrito";
+
+            botonCarrito.addEventListener("click", async () => {
+
+                if (!usuario || usuario.rol !== "comprador") {
+                    alert("Iniciá sesión como comprador para realizar compras.");
+                    return;
+                }
+
+                if (Number(producto.stock) < 1) {
+                    alert("Este producto no tiene stock disponible.");
+                    return;
+                }
+
+                try {
+
+                    const respuesta = await fetch(
+                        "http://localhost:3000/carrito",
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                id_usuario: usuario.id,
+                                id_producto: producto.id,
+                                cantidad: 1
+                            })
+                        }
+                    );
+
+                    const datos = await respuesta.json();
+
+                    if (!respuesta.ok) {
+                        throw new Error(
+                            datos.error || "No se pudo agregar el producto"
+                        );
+                    }
+
+                    alert("¡Producto agregado al carrito!");
+
+                } catch (error) {
+                    console.error("Error al agregar al carrito:", error);
+                    alert(error.message);
+                }
+            });
 
             // ARMAR TARJETA
             tarjeta.appendChild(botonFavorito);

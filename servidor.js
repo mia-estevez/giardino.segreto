@@ -398,6 +398,190 @@ app.delete("/favoritos/:id_usuario/:id_producto", (req, res) => {
 });
 
 
+// ================================
+// CARRITO
+// ================================
+
+// AGREGAR PRODUCTO AL CARRITO
+app.post("/carrito", (req, res) => {
+
+    const { id_usuario, id_producto, cantidad } = req.body;
+
+    if (!id_usuario || !id_producto || !cantidad || cantidad < 1) {
+        return res.status(400).json({
+            error: "Los datos del producto son obligatorios"
+        });
+    }
+
+    const consulta = `
+        INSERT INTO carrito (id_usuario, id_producto, cantidad)
+        VALUES (?, ?, ?)
+        ON DUPLICATE KEY UPDATE cantidad = cantidad + VALUES(cantidad)
+    `;
+
+    conexion.query(
+        consulta,
+        [id_usuario, id_producto, cantidad],
+        (error, resultado) => {
+
+            if (error) {
+                console.log("Error al agregar al carrito:", error);
+
+                return res.status(500).json({
+                    error: "No se pudo agregar el producto al carrito"
+                });
+            }
+
+            res.status(201).json({
+                mensaje: "Producto agregado al carrito"
+            });
+        }
+    );
+});
+
+
+// MOSTRAR CARRITO DE UN USUARIO
+app.get("/carrito/:id_usuario", (req, res) => {
+
+    const { id_usuario } = req.params;
+
+    const consulta = `
+        SELECT
+            producto.id,
+            producto.nombre,
+            producto.descripcion,
+            producto.precio,
+            producto.stock,
+            carrito.cantidad
+        FROM carrito
+        INNER JOIN producto
+            ON carrito.id_producto = producto.id
+        WHERE carrito.id_usuario = ?
+    `;
+
+    conexion.query(consulta, [id_usuario], (error, resultado) => {
+
+        if (error) {
+            console.log("Error al consultar carrito:", error);
+
+            return res.status(500).json({
+                error: "No se pudo consultar el carrito"
+            });
+        }
+
+        res.status(200).json(resultado);
+    });
+});
+
+
+// MODIFICAR CANTIDAD
+app.put("/carrito/:id_usuario/:id_producto", (req, res) => {
+
+    const { id_usuario, id_producto } = req.params;
+    const { cantidad } = req.body;
+
+    if (!Number.isInteger(cantidad) || cantidad < 1) {
+        return res.status(400).json({
+            error: "La cantidad debe ser mayor a cero"
+        });
+    }
+
+    const consulta = `
+        UPDATE carrito
+        SET cantidad = ?
+        WHERE id_usuario = ? AND id_producto = ?
+    `;
+
+    conexion.query(
+        consulta,
+        [cantidad, id_usuario, id_producto],
+        (error, resultado) => {
+
+            if (error) {
+                console.log("Error al modificar cantidad:", error);
+
+                return res.status(500).json({
+                    error: "No se pudo modificar la cantidad"
+                });
+            }
+
+            if (resultado.affectedRows === 0) {
+                return res.status(404).json({
+                    error: "No se encontró el producto en el carrito"
+                });
+            }
+
+            res.status(200).json({
+                mensaje: "Cantidad actualizada correctamente"
+            });
+        }
+    );
+});
+
+
+// ELIMINAR PRODUCTO DEL CARRITO
+app.delete("/carrito/:id_usuario/:id_producto", (req, res) => {
+
+    const { id_usuario, id_producto } = req.params;
+
+    const consulta = `
+        DELETE FROM carrito
+        WHERE id_usuario = ? AND id_producto = ?
+    `;
+
+    conexion.query(
+        consulta,
+        [id_usuario, id_producto],
+        (error, resultado) => {
+
+            if (error) {
+                console.log("Error al eliminar del carrito:", error);
+
+                return res.status(500).json({
+                    error: "No se pudo eliminar el producto"
+                });
+            }
+
+            if (resultado.affectedRows === 0) {
+                return res.status(404).json({
+                    error: "No se encontró el producto"
+                });
+            }
+
+            res.status(200).json({
+                mensaje: "Producto eliminado del carrito"
+            });
+        }
+    );
+});
+
+
+// VACIAR CARRITO
+app.delete("/carrito/:id_usuario", (req, res) => {
+
+    const { id_usuario } = req.params;
+
+    conexion.query(
+        "DELETE FROM carrito WHERE id_usuario = ?",
+        [id_usuario],
+        (error, resultado) => {
+
+            if (error) {
+                console.log("Error al vaciar carrito:", error);
+
+                return res.status(500).json({
+                    error: "No se pudo vaciar el carrito"
+                });
+            }
+
+            res.status(200).json({
+                mensaje: "Carrito vaciado correctamente"
+            });
+        }
+    );
+});
+
+
 // CREAR ADMINISTRADOR PREDETERMINADO
 async function crearAdministrador() {
 
