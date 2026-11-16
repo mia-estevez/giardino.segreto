@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giardino Segreto - Carrito de Compras</title>
+    <link rel="stylesheet" href="CSS/carrito.css" />
+    <!-- Fuentes e íconos de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    
+    <header>
+        <a href="index.html" class="logo-texto">
+            <span class="material-symbols-outlined logo-icono">local_florist</span>
+            <div class="logo-palabras">
+                <span class="logo-titulo">Giardino Segreto</span>
+                <span class="logo-subtitulo">FLORERÍA ARTESANAL</span>
+            </div>
+        </a>
+
+        <nav class="menu">
+            <div class="botontres">
+                <button class="menu-toggle">&#9776;</button>
+            </div>
+            <div class="submenu">
+                <ul class="nav-menu">
+                    <li class="li1"><a href="index.html">Nosotros</a>
+                        <ul>
+                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="cuidados.html">Cuidados</a></li>
+                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="asesoramiento.html">Asesoramiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="li1"><a href="registrarse.html">Registrarse</a></li>
+                    <li class="li1"><a href="login.html">Login</a></li>
+                    <li class="li1"><a href="productos.html">Productos</a></li>
+                    <li class="li1"><a href="favoritos.html">Favoritos</a></li>
+                    <li class="li1"><a href="catalogo.html">Catálogo</a></li>
+                    <li class="li1"><a href="carrito.html">Carrito</a></li>
+                </ul>
+            </div>  
+       </nav>
+    </header>
+
+    <!-- ENCABEZADO DE SECCIÓN -->
+    <section class="banner-seccion">
+        <span class="etiqueta-seccion">Tus Compras</span>
+        <h1>Carrito de Compras</h1>
+        <p>Revisa los productos seleccionados antes de finalizar tu pedido floral.</p>
+    </section>
+
+    <main class="contenedor-carrito">
+
+        <!-- CONTENEDOR PRINCIPAL DEL CARRITO -->
+        <div id="carrito-contenido" class="carrito-grid">
+            
+            <!-- LISTA DE PRODUCTOS SELECCIONADOS -->
+            <div class="carrito-productos">
+                <div class="tabla-encabezado">
+                    <span>Producto</span>
+                    <span>Precio</span>
+                    <span>Cantidad</span>
+                    <span>Subtotal</span>
+                    <span>Acción</span>
+                </div>
+
+                <!-- Item 1 -->
+                <div class="carrito-item">
+                    <div class="item-info">
+                        <img src="img/pack romantico.webp" alt="Ramo de Rosas">
+                        <div>
+                            <h4>Pack Romántico</h4>
+                            <small>12 Rosas rojas con envoltorio</small>
+                        </div>
+                    </div>
+                    <span class="item-precio">$18.500</span>
+                    <div class="item-cantidad">
+                        <input type="number" value="1" min="1">
+                    </div>
+                    <span class="item-subtotal">$18.500</span>
+                    <button type="button" class="btn-eliminar-item" title="Eliminar producto">
+                        <span class="material-symbols-outlined">delete</span>
+                    </button>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="carrito-item">
+                    <div class="item-info">
+                        <img src="img/girasol1.jpg" alt="Girasoles Radiantes">
+                        <div>
+                            <h4>Girasoles Radiantes</h4>
+                            <small>6 girasoles de estación</small>
+                        </div>
+                    </div>
+                    <span class="item-precio">$14.000</span>
+                    <div class="item-cantidad">
+                        <input type="number" value="1" min="1">
+                    </div>
+                    <span class="item-subtotal">$14.000</span>
+                    <button type="button" class="btn-eliminar-item" title="Eliminar producto">
+                        <span class="material-symbols-outlined">delete</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- RESUMEN / TOTALES DEL COMPRADOR -->
+            <aside class="carrito-resumen">
+                <h3>Resumen del Pedido</h3>
+                <div class="resumen-linea">
+                    <span>Subtotal</span>
+                    <span>$32.500</span>
+                </div>
+                <div class="resumen-linea">
+                    <span>Envío</span>
+                    <span class="envio-gratis">Gratis</span>
+                </div>
+                <div class="resumen-total">
+                    <span>Total</span>
+                    <span>$32.500</span>
+                </div>
+                <button type="button" id="btn-ir-checkout" class="btn-checkout">
+                    Finalizar Compra
+                </button>
+                <a href="productos.html" class="link-continuar">← Seguir Comprando</a>
+            </aside>
+
+        </div>
+
+        <!-- FORMULARIO DE DATOS DE ENVÍO (Oculto al inicio) -->
+        <div id="seccion-checkout" class="seccion-checkout" style="display: none;">
+            <div class="checkout-card">
+                <h2>Datos de Envío y Pago</h2>
+                <p>Completa tus datos para despachar tu pedido floral.</p>
+                
+                <form id="form-checkout">
+                    <div class="campo-grupo">
+                        <label for="checkout-nombre">Nombre y Apellido</label>
+                        <input type="text" id="checkout-nombre" placeholder="Ej: María Gómez" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="checkout-tel">Teléfono de Contacto</label>
+                        <input type="tel" id="checkout-tel" placeholder="Ej: 2994123456" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="checkout-direccion">Dirección de Entrega</label>
+                        <input type="text" id="checkout-direccion" placeholder="Calle, Número, Ciudad" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="checkout-pago">Método de Pago</label>
+                        <select id="checkout-pago" required>
+                            <option value="">Selecciona un método</option>
+                            <option value="Tarjeta de Crédito/Débito">Tarjeta de Crédito / Débito</option>
+                            <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+                            <option value="Efectivo al recibir">Efectivo al recibir</option>
+                        </select>
+                    </div>
+
+                    <div class="form-botones-checkout">
+                        <button type="submit" class="btn-principal">Generar Comprobante</button>
+                        <button type="button" id="btn-volver-carrito" class="btn-cancelar-checkout">Volver al Carrito</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- COMPROBANTE DE PAGO / TICKET (Oculto al inicio) -->
+        <div id="seccion-comprobante" class="seccion-comprobante" style="display: none;">
+            <div class="ticket-card">
+                <div class="ticket-header">
+                    <span class="material-symbols-outlined ticket-icono">check_circle</span>
+                    <h2>¡Compra Exitosa!</h2>
+                    <p>Comprobante de Pedido - Giardino Segreto</p>
+                </div>
+
+                <div class="ticket-detalles">
+                    <div class="ticket-info-cliente">
+                        <p><strong>Cliente:</strong> <span id="t-nombre"></span></p>
+                        <p><strong>Teléfono:</strong> <span id="t-tel"></span></p>
+                        <p><strong>Dirección:</strong> <span id="t-direccion"></span></p>
+                        <p><strong>Método de Pago:</strong> <span id="t-pago"></span></p>
+                        <p><strong>Fecha:</strong> <span id="t-fecha"></span></p>
+                    </div>
+
+                    <div class="ticket-productos">
+                        <h4>Detalle de Productos</h4>
+                        <ul>
+                            <li><span>Pack Romántico (x1)</span> <span>$18.500</span></li>
+                            <li><span>Girasoles Radiantes (x1)</span> <span>$14.000</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="ticket-total-final">
+                        <span>Total Pagado:</span>
+                        <span class="monto-final">$32.500</span>
+                    </div>
+                </div>
+
+                <div class="ticket-botones">
+                    <button type="button" class="btn-principal" onclick="window.print()">Imprimir Comprobante</button>
+                    <a href="productos.html" class="btn-cancelar-checkout">Volver a la Tienda</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESTADO VACÍO (Oculto por defecto) -->
+        <div id="carrito-vacio" class="estado-vacio" style="display: none;">
+            <span class="material-symbols-outlined icono-vacio">shopping_cart_off</span>
+            <h2>Tu carrito está vacío</h2>
+            <p>Aún no has agregado ningún arreglo floral o producto a tu carrito.</p>
+            <a href="productos.html" class="btn-principal">Ver Productos</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Giardino Segreto. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- SCRIPT DE INTERACCIÓN DEL CHECKOUT -->
+    <script>
+        const btnIrCheckout = document.getElementById('btn-ir-checkout');
+        const carritoContenido = document.getElementById('carrito-contenido');
+        const seccionCheckout = document.getElementById('seccion-checkout');
+        const btnVolverCarrito = document.getElementById('btn-volver-carrito');
+        const formCheckout = document.getElementById('form-checkout');
+        const seccionComprobante = document.getElementById('seccion-comprobante');
+
+        btnIrCheckout.addEventListener('click', () => {
+            carritoContenido.style.display = 'none';
+            seccionCheckout.style.display = 'block';
+        });
+
+        btnVolverCarrito.addEventListener('click', () => {
+            seccionCheckout.style.display = 'none';
+            carritoContenido.style.display = 'grid';
+        });
+
+        formCheckout.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const nombre = document.getElementById('checkout-nombre').value;
+            const tel = document.getElementById('checkout-tel').value;
+            const direccion = document.getElementById('checkout-direccion').value;
+            const pago = document.getElementById('checkout-pago').value;
+
+            document.getElementById('t-nombre').textContent = nombre;
+            document.getElementById('t-tel').textContent = tel;
+            document.getElementById('t-direccion').textContent = direccion;
+            document.getElementById('t-pago').textContent = pago;
+            document.getElementById('t-fecha').textContent = new Date().toLocaleDateString();
+
+            seccionCheckout.style.display = 'none';
+            seccionComprobante.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

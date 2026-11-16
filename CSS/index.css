@@ -1,0 +1,350 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff6f8;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* --- HEADER --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    background-color: #e792af;
+    border-bottom: 2px solid #d87093;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo-texto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.logo-texto:hover {
+    opacity: 0.9;
+}
+
+.logo-icono {
+    font-size: 2.2rem;
+    color: #fff0f5;
+}
+
+.logo-palabras {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+}
+
+.logo-subtitulo {
+    font-size: 0.65rem;
+    letter-spacing: 2.5px;
+    opacity: 0.9;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu-toggle {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #242020;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #d87093;
+    border-radius: 12px;
+    width: 210px;
+    padding: 10px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.menu:hover .submenu {
+    display: block;
+}
+
+.nav-menu, .nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.li2 {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: white;
+}
+
+/* --- HERO BANNER (PORTADA) --- */
+.hero {
+    /* Fondo degradado + imagen floral suave */
+    background: linear-gradient(rgba(53, 74, 47, 0.65), rgba(216, 112, 147, 0.65)),
+                url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.hero-contenido {
+    max-width: 750px;
+}
+
+.subtitulo-hero {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+    font-weight: 300;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-principal {
+    background-color: #e792af;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn-principal:hover {
+    background-color: #d17b88;
+    transform: translateY(-3px);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-secundario:hover {
+    background-color: white;
+    color: #354a2f;
+}
+
+/* --- BARRA DE BENEFICIOS --- */
+.beneficios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: white;
+    width: 85%;
+    max-width: 1100px;
+    margin: -40px auto 50px auto; /* Sube ligeramente sobre el banner */
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(216, 112, 147, 0.15);
+    position: relative;
+    z-index: 10;
+}
+
+.beneficio-item {
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+}
+
+.beneficio-item span {
+    font-size: 2.2rem;
+    color: #354a2f; /* Verde del logo */
+    margin-bottom: 8px;
+}
+
+.beneficio-item h4 {
+    color: #c06c84;
+    margin-bottom: 4px;
+}
+
+.beneficio-item p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* --- TARJETAS DE ESENCIA Y OBJETIVOS --- */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 85%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.tarjeta-info {
+    background: white;
+    padding: 35px;
+    border-radius: 22px;
+    border-top: 5px solid #e792af;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.tarjeta-info:hover {
+    transform: translateY(-6px);
+}
+
+.icono-tarjeta {
+    font-size: 2.5rem;
+    color: #e792af;
+    background: #fff0f5;
+    padding: 15px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.tarjeta-info h2 {
+    font-family: 'Playfair Display', serif;
+    color: #354a2f;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-info p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* --- DESTACADOS --- */
+.destacados {
+    width: 85%;
+    max-width: 1100px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.destacados h2 {
+    font-family: 'Playfair Display', serif;
+    color: #c06c84;
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+}
+
+.galeria-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card-flor {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.card-flor:hover {
+    transform: translateY(-8px);
+}
+
+.card-flor img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #ffeef2;
+}
+
+.card-texto {
+    padding: 20px;
+}
+
+.card-texto h3 {
+    color: #354a2f;
+    margin-bottom: 8px;
+}
+
+.card-texto p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.card-texto a {
+    color: #d87093;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #e792af;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
