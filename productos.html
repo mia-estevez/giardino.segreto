@@ -40,7 +40,7 @@
                         </ul>
                     </li>
                     <li class="li1"><a href="favoritos.html">Favoritos</a></li>
-                    <li class="li1"><a href="catalogo.php">Catálogo</a></li>
+                    <li class="li1"><a href="catalogo.php">Administrar Catálogo</a></li>
                     <li class="li1"><a href="carrito.html">Carrito</a></li>
                 </ul>
             </div>  
@@ -70,14 +70,19 @@
                 <h2>Promociones Destacadas</h2>
             </div>
 
-            <article class="tarjeta-coleccion">
+            <article class="tarjeta-coleccion" data-id="promo-1">
                 <div class="coleccion-top">
                     <div>
                         <span class="badge-promo">20% OFF</span>
                         <h3>🌹 Pack Romántico</h3>
                         <p class="descripcion-coleccion">12 rosas rojas con envoltorio especial y tarjeta personalizada. ¡Por tiempo limitado!</p>
                     </div>
-                    <a href="catalogo.php" class="btn-consultar">Ver en Catálogo</a>
+                    <div class="acciones-coleccion">
+                        <button type="button" class="btn-fav" title="Guardar en favoritos">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <a href="carrito.html" class="btn-consultar">Agregar al Carrito</a>
+                    </div>
                 </div>
 
                 <div class="galeria-3">
@@ -92,14 +97,19 @@
                 </p>
             </article>
 
-            <article class="tarjeta-coleccion">
+            <article class="tarjeta-coleccion" data-id="promo-2">
                 <div class="coleccion-top">
                     <div>
                         <span class="badge-promo">REGALO INCLUIDO</span>
                         <h3>🌻 Dúo de Girasoles</h3>
                         <p class="descripcion-coleccion">Llévate dos ramos de girasoles frescos y obtén un florero artesanal de regalo.</p>
                     </div>
-                    <a href="catalogo.php" class="btn-consultar">Ver en Catálogo</a>
+                    <div class="acciones-coleccion">
+                        <button type="button" class="btn-fav" title="Guardar en favoritos">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <a href="carrito.html" class="btn-consultar">Agregar al Carrito</a>
+                    </div>
                 </div>
 
                 <div class="galeria-3">
@@ -115,7 +125,7 @@
             </article>
         </section>
 
-        <!-- 2. TODOS LOS PRODUCTOS (En cuadrícula de 3 columnas) -->
+        <!-- 2. TODOS LOS PRODUCTOS / VARIEDADES -->
         <section id="todos" class="bloque-seccion">
             <div class="encabezado-categoria">
                 <span class="material-symbols-outlined">spa</span>
@@ -123,40 +133,76 @@
             </div>
 
             <div class="grid-variedades">
-                <div class="card-variedad">
-                    <span class="emoji-flor">🌹</span>
-                    <h3>Ramos de Rosas</h3>
-                    <p>Disponibles en rojo, blanco, rosa y amarillo con follaje fresco.</p>
+                <div class="card-variedad" data-id="var-1">
+                    <button type="button" class="btn-fav-flotante" title="Guardar en favoritos">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </button>
+                    <div>
+                        <span class="emoji-flor">🌹</span>
+                        <h3>Ramos de Rosas</h3>
+                        <p>Disponibles en rojo, blanco, rosa y amarillo con follaje fresco.</p>
+                    </div>
+                    <a href="carrito.html" class="btn-consultar-chico">Agregar al Carrito</a>
                 </div>
 
-                <div class="card-variedad">
-                    <span class="emoji-flor">🌻</span>
-                    <h3>Girasoles</h3>
-                    <p>Ideales para transmitir alegría, luz y energía en cualquier ambiente.</p>
+                <div class="card-variedad" data-id="var-2">
+                    <button type="button" class="btn-fav-flotante" title="Guardar en favoritos">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </button>
+                    <div>
+                        <span class="emoji-flor">🌻</span>
+                        <h3>Girasoles</h3>
+                        <p>Ideales para transmitir alegría, luz y energía en cualquier ambiente.</p>
+                    </div>
+                    <a href="carrito.html" class="btn-consultar-chico">Agregar al Carrito</a>
                 </div>
 
-                <div class="card-variedad">
-                    <span class="emoji-flor">🌷</span>
-                    <h3>Tulipanes</h3>
-                    <p>Arreglos delicados y elegantes en tonos suaves para toda ocasión.</p>
+                <div class="card-variedad" data-id="var-3">
+                    <button type="button" class="btn-fav-flotante" title="Guardar en favoritos">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </button>
+                    <div>
+                        <span class="emoji-flor">🌷</span>
+                        <h3>Tulipanes</h3>
+                        <p>Arreglos delicados y elegantes en tonos suaves para toda ocasión.</p>
+                    </div>
+                    <a href="carrito.html" class="btn-consultar-chico">Agregar al Carrito</a>
                 </div>
 
-                <div class="card-variedad">
-                    <span class="emoji-flor">🌼</span>
-                    <h3>Margaritas</h3>
-                    <p>Frescas y silvestres, perfectas para regalar y decorar espacios.</p>
+                <div class="card-variedad" data-id="var-4">
+                    <button type="button" class="btn-fav-flotante" title="Guardar en favoritos">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </button>
+                    <div>
+                        <span class="emoji-flor">🌼</span>
+                        <h3>Margaritas</h3>
+                        <p>Frescas y silvestres, perfectas para regalar y decorar espacios.</p>
+                    </div>
+                    <a href="carrito.html" class="btn-consultar-chico">Agregar al Carrito</a>
                 </div>
 
-                <div class="card-variedad">
-                    <span class="emoji-flor">🌿</span>
-                    <h3>Plantas Ornamentales</h3>
-                    <p>Opciones naturales de interior y exterior fáciles de cuidar.</p>
+                <div class="card-variedad" data-id="var-5">
+                    <button type="button" class="btn-fav-flotante" title="Guardar en favoritos">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </button>
+                    <div>
+                        <span class="emoji-flor">🌿</span>
+                        <h3>Plantas Ornamentales</h3>
+                        <p>Opciones naturales de interior y exterior fáciles de cuidar.</p>
+                    </div>
+                    <a href="carrito.html" class="btn-consultar-chico">Agregar al Carrito</a>
                 </div>
 
-                <div class="card-variedad">
-                    <span class="emoji-flor">🎁</span>
-                    <h3>Cajas de Regalo Florales</h3>
-                    <p>Combinaciones exclusivas con flores de estación y detalles personalizados.</p>
+                <div class="card-variedad" data-id="var-6">
+                    <button type="button" class="btn-fav-flotante" title="Guardar en favoritos">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </button>
+                    <div>
+                        <span class="emoji-flor">🎁</span>
+                        <h3>Cajas de Regalo Florales</h3>
+                        <p>Combinaciones exclusivas con flores de estación y detalles personalizados.</p>
+                    </div>
+                    <a href="carrito.html" class="btn-consultar-chico">Agregar al Carrito</a>
                 </div>
             </div>
         </section>
@@ -168,13 +214,18 @@
                 <h2>Ediciones Especiales</h2>
             </div>
 
-            <article class="tarjeta-coleccion">
+            <article class="tarjeta-coleccion" data-id="esp-1">
                 <div class="coleccion-top">
                     <div>
                         <h3>❤️ Colección San Valentín</h3>
                         <p class="descripcion-coleccion">Arreglos románticos con rosas premium y bombones artesanales.</p>
                     </div>
-                    <a href="catalogo.php" class="btn-consultar">Explorar</a>
+                    <div class="acciones-coleccion">
+                        <button type="button" class="btn-fav" title="Guardar en favoritos">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <a href="carrito.html" class="btn-consultar">Agregar al Carrito</a>
+                    </div>
                 </div>
                 <div class="galeria-3">
                     <img src="img/sv1.jpg" alt="San Valentín 1" class="img-promo">
@@ -184,13 +235,18 @@
                 <p class="texto-promo">¡Para que tu día de los enamorados sea súper especial!</p>
             </article>
 
-            <article class="tarjeta-coleccion">
+            <article class="tarjeta-coleccion" data-id="esp-2">
                 <div class="coleccion-top">
                     <div>
                         <h3>🎄 Colección Navideña</h3>
                         <p class="descripcion-coleccion">Centros de mesa con velas, piñas y arreglos inspirados en las fiestas.</p>
                     </div>
-                    <a href="catalogo.php" class="btn-consultar">Explorar</a>
+                    <div class="acciones-coleccion">
+                        <button type="button" class="btn-fav" title="Guardar en favoritos">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <a href="carrito.html" class="btn-consultar">Agregar al Carrito</a>
+                    </div>
                 </div>
                 <div class="galeria-3">
                     <img src="img/navi1.jpg" alt="Navidad 1" class="img-promo">
@@ -200,13 +256,18 @@
                 <p class="texto-promo">¡Para que pases las mejores fiestas con nuestros arreglos hechos con el corazón!</p>
             </article>
 
-            <article class="tarjeta-coleccion">
+            <article class="tarjeta-coleccion" data-id="esp-3">
                 <div class="coleccion-top">
                     <div>
                         <h3>🌸 Colección Primavera</h3>
                         <p class="descripcion-coleccion">Diseños coloridos y frescos con flores silvestres de temporada.</p>
                     </div>
-                    <a href="catalogo.php" class="btn-consultar">Explorar</a>
+                    <div class="acciones-coleccion">
+                        <button type="button" class="btn-fav" title="Guardar en favoritos">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <a href="carrito.html" class="btn-consultar">Agregar al Carrito</a>
+                    </div>
                 </div>
                 <div class="galeria-3">
                     <img src="img/ramopri1.webp" alt="Primavera 1" class="img-promo">
@@ -216,13 +277,18 @@
                 <p class="texto-promo">¡Para que tu primavera esté llena de hermosos colores!</p>
             </article>
 
-            <article class="tarjeta-coleccion">
+            <article class="tarjeta-coleccion" data-id="esp-4">
                 <div class="coleccion-top">
                     <div>
                         <h3>👰 Colección Bodas</h3>
                         <p class="descripcion-coleccion">Ramos de novia exclusivos y ambientaciones personalizadas para ceremonias.</p>
                     </div>
-                    <a href="catalogo.php" class="btn-consultar">Explorar</a>
+                    <div class="acciones-coleccion">
+                        <button type="button" class="btn-fav" title="Guardar en favoritos">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </button>
+                        <a href="carrito.html" class="btn-consultar">Agregar al Carrito</a>
+                    </div>
                 </div>
                 <div class="galeria-3">
                     <img src="img/ramonovia4.jpg" alt="Ramo novia 1" class="img-promo">

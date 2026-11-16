@@ -374,3 +374,155 @@ footer {
     padding: 20px;
     margin-top: 40px;
 }
+/* --- BOTONES DE FAVORITOS Y CARRITO EN PRODUCTOS --- */
+.acciones-producto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-fav {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid #f2cbd8;
+    background-color: #fff6f8;
+    color: #d87093;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-fav:hover, .btn-fav.activo {
+    background-color: #d87093;
+    color: white;
+    border-color: #d87093;
+    transform: scale(1.08);
+}
+
+/* Corazón flotante en las tarjetas de Variedades */
+.card-variedad {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-fav-flotante {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #f2cbd8;
+    background-color: #fff6f8;
+    color: #d87093;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-fav-flotante:hover, .btn-fav-flotante.activo {
+    background-color: #d87093;
+    color: white;
+    transform: scale(1.1);
+}
+
+.btn-consultar-chico {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #e792af;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-consultar-chico:hover {
+    background-color: #d17b88;
+}
+/* --- ACCIONES Y BOTÓN DE FAVORITOS (CORAZÓN) --- */
+.acciones-coleccion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-fav {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1.5px solid #f2cbd8;
+    background-color: #fff6f8;
+    color: #d87093;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-fav:hover, .btn-fav.activo {
+    background-color: #d87093;
+    color: white;
+    border-color: #d87093;
+    transform: scale(1.08);
+}
+
+/* Tarjetas de variedades con botón de favorito flotante */
+.card-variedad {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-fav-flotante {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #f2cbd8;
+    background-color: #fff6f8;
+    color: #d87093;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    z-index: 2;
+}
+
+.btn-fav-flotante:hover, .btn-fav-flotante.activo {
+    background-color: #d87093;
+    color: white;
+    transform: scale(1.1);
+}
+
+.btn-consultar-chico {
+    display: inline-block;
+    margin-top: 18px;
+    background-color: #e792af;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.btn-consultar-chico:hover {
+    background-color: #d17b88;
+}
