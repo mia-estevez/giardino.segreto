@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <header>
+    <header class="no-imprimir">
         <a href="index.html" class="logo-texto">
             <span class="material-symbols-outlined logo-icono">local_florist</span>
             <div class="logo-palabras">
@@ -44,7 +44,7 @@
     </header>
 
     <!-- ENCABEZADO DE SECCIÓN -->
-    <section class="banner-seccion">
+    <section class="banner-seccion no-imprimir">
         <span class="etiqueta-seccion">Tus Compras</span>
         <h1>Carrito de Compras</h1>
         <p>Revisa los productos seleccionados antes de finalizar tu pedido floral.</p>
@@ -53,7 +53,7 @@
     <main class="contenedor-carrito">
 
         <!-- CONTENEDOR PRINCIPAL DEL CARRITO -->
-        <div id="carrito-contenido" class="carrito-grid">
+        <div id="carrito-contenido" class="carrito-grid no-imprimir">
             
             <!-- LISTA DE PRODUCTOS SELECCIONADOS -->
             <div class="carrito-productos">
@@ -128,7 +128,7 @@
         </div>
 
         <!-- FORMULARIO DE DATOS DE ENVÍO (Oculto al inicio) -->
-        <div id="seccion-checkout" class="seccion-checkout" style="display: none;">
+        <div id="seccion-checkout" class="seccion-checkout no-imprimir" style="display: none;">
             <div class="checkout-card">
                 <h2>Datos de Envío y Pago</h2>
                 <p>Completa tus datos para despachar tu pedido floral.</p>
@@ -171,9 +171,9 @@
         <div id="seccion-comprobante" class="seccion-comprobante" style="display: none;">
             <div class="ticket-card">
                 <div class="ticket-header">
-                    <span class="material-symbols-outlined ticket-icono">check_circle</span>
-                    <h2>¡Compra Exitosa!</h2>
-                    <p>Comprobante de Pedido - Giardino Segreto</p>
+                    <span class="material-symbols-outlined ticket-icono">local_florist</span>
+                    <h2>Giardino Segreto</h2>
+                    <p>Comprobante Oficial de Pedido</p>
                 </div>
 
                 <div class="ticket-detalles">
@@ -199,7 +199,7 @@
                     </div>
                 </div>
 
-                <div class="ticket-botones">
+                <div class="ticket-botones no-imprimir">
                     <button type="button" class="btn-principal" onclick="window.print()">Imprimir Comprobante</button>
                     <a href="productos.html" class="btn-cancelar-checkout">Volver a la Tienda</a>
                 </div>
@@ -207,7 +207,7 @@
         </div>
 
         <!-- ESTADO VACÍO (Oculto por defecto) -->
-        <div id="carrito-vacio" class="estado-vacio" style="display: none;">
+        <div id="carrito-vacio" class="estado-vacio no-imprimir" style="display: none;">
             <span class="material-symbols-outlined icono-vacio">shopping_cart_off</span>
             <h2>Tu carrito está vacío</h2>
             <p>Aún no has agregado ningún arreglo floral o producto a tu carrito.</p>
@@ -216,7 +216,7 @@
 
     </main>
 
-    <footer>
+    <footer class="no-imprimir">
         <p>&copy; 2026 Giardino Segreto. Todos los derechos reservados.</p>
     </footer>
 

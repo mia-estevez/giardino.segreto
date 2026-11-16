@@ -496,3 +496,42 @@ footer {
     padding: 20px;
     margin-top: auto;
 }
+
+/* ==========================================================
+   REGLAS ESPECIALES PARA IMPRESIÓN / DESCARGA A PDF
+   ========================================================== */
+@media print {
+    @page {
+        margin: 10mm; /* Elimina los márgenes automáticos donde los navegadores ponen la URL */
+    }
+
+    .no-imprimir {
+        display: none !important;
+    }
+
+    body {
+        background-color: white !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    .seccion-comprobante {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .ticket-card {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .ticket-info-cliente {
+        background-color: #f9f9f9 !important;
+        border: 1px solid #ddd !important;
+    }
+}
