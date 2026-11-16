@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giardino Segreto - Iniciar Sesión</title>
+    <link rel="stylesheet" href="CSS/registrarse.css" />
+    <!-- Fuentes e íconos de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="JS/registrarse.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-texto">
+            <span class="material-symbols-outlined logo-icono">local_florist</span>
+            <div class="logo-palabras">
+                <span class="logo-titulo">Giardino Segreto</span>
+                <span class="logo-subtitulo">FLORERÍA ARTESANAL</span>
+            </div>
+        </a>
+
+        <nav class="menu">
+            <div class="botontres">
+                <button class="menu-toggle">&#9776;</button>
+            </div>
+            <div class="submenu">
+                <ul class="nav-menu">
+                    <li class="li1"><a href="index.html">Nosotros</a>
+                        <ul>
+                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="cuidados.html">Cuidados</a></li>
+                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="asesoramiento.html">Asesoramiento</a></li>
+                        </ul>
+                    </li>
+                    <li class="li1"><a href="registrarse.html">Registrarse</a></li>
+                    <li class="li1"><a href="login.html">Login</a></li>
+                    <li class="li1"><a href="productos.html">Productos</a></li>
+                    <li class="li1"><a href="favoritos.html">Favoritos</a></li>
+                    <li class="li1"><a href="catalogo.html">Catálogo</a></li>
+                    <li class="li1"><a href="carrito.html">Carrito</a></li>
+                </ul>
+            </div>  
+       </nav>
+    </header>
+    
+    <main class="contenedor-registro">
+        <section id="formularioSection" class="formulario">
+            <div class="reg-franja" id="reg-franja">
+                
+                <div class="cabecera-form">
+                    <span class="material-symbols-outlined icono-form">lock_open</span>
+                    <h1>Iniciar Sesión</h1>
+                    <p>Ingresa a tu cuenta para ver tus favoritos y pedidos</p>
+                </div>
+
+                <form id="formulario-login">
+                    <div class="campo-grupo">
+                        <label for="mail">Email</label>
+                        <div class="input-con-icono">
+                            <span class="material-symbols-outlined">mail</span>
+                            <input type="email" name="correo" id="mail" placeholder="ejemplo@correo.com" required>
+                        </div>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label for="contra">Contraseña</label>
+                        <div class="password-container">
+                            <div class="input-con-icono" style="flex: 1;">
+                                <span class="material-symbols-outlined">lock</span>
+                                <input type="password" name="contraseña" id="contra" placeholder="Tu contraseña" required>
+                            </div>
+                            <button type="button" id="btnVerPassword" class="btn-ver">Ver</button>
+                        </div>
+                    </div>
+
+                    <input type="submit" name="enviar" value="Ingresar" class="enviar">
+
+                    <p style="text-align: center; margin-top: 18px; font-size: 0.88rem; color: #666;">
+                        ¿No tienes una cuenta? <a href="registrarse.html" style="color: #c06c84; font-weight: 600; text-decoration: none;">Regístrate aquí</a>
+                    </p>
+                </form>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Giardino Segreto. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
