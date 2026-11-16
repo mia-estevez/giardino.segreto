@@ -1,47 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giardino Segreto - Mis Favoritos</title>
-    <link rel="stylesheet" href="CSS/favoritos.css" />
-    <!-- Fuentes e íconos de Google iguales al resto del sitio -->
+
+    <link rel="stylesheet" href="CSS/favoritos.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+
+    <!-- Fuentes e íconos -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;600&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+    <!-- JavaScript -->
+    <script src="JS/menu.js" defer></script>
+    <script src="JS/favoritos.js" defer></script>
 </head>
+
 <body>
-
-    <header>
-        <a href="index.html" class="logo-texto">
-            <span class="material-symbols-outlined logo-icono">local_florist</span>
-            <div class="logo-palabras">
-                <span class="logo-titulo">Giardino Segreto</span>
-                <span class="logo-subtitulo">FLORERÍA ARTESANAL</span>
-            </div>
-        </a>
-
-        <nav class="menu">
-            <div class="botontres">
-                <button class="menu-toggle">&#9776;</button>
-            </div>
-            <div class="submenu">
-                <ul class="nav-menu">
-                    <li class="li1"><a href="index.html">Nosotros</a>
-                        <ul>
-                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="cuidados.html">Cuidados</a></li>
-                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="asesoramiento.html">Asesoramiento</a></li>
-                        </ul>
-                    </li>
-                    <li class="li1"><a href="registrarse.html">Registrarse</a></li>
-                    <li class="li1"><a href="login.html">Login</a></li>
-                    <li class="li1"><a href="productos.html">Productos</a></li>
-                    <li class="li1"><a href="favoritos.html">Favoritos</a></li>
-                    <li class="li1"><a href="catalogo.html">Catálogo</a></li>
-                    <li class="li1"><a href="carrito.html">Carrito</a></li>
-                </ul>
-            </div>  
-       </nav>
-    </header>
 
     <!-- ENCABEZADO DE SECCIÓN -->
     <section class="banner-seccion">
@@ -52,84 +30,17 @@
 
     <main class="contenedor-favoritos">
 
-        <!-- BARRA SUPERIOR CON CONTADOR -->
+        <!-- BARRA SUPERIOR -->
         <div class="barra-resumen">
-            <span id="contador-favoritos">3 productos guardados</span>
+            <span id="contador-favoritos">Cargando favoritos...</span>
             <a href="productos.html" class="link-seguir">+ Explorar más flores</a>
         </div>
 
-        <!-- CUADRÍCULA DE FAVORITOS (Tu compañera podrá repetir <article class="card-favorito"> con un while de PHP) -->
+        <!-- PRODUCTOS FAVORITOS DE LA BASE DE DATOS -->
         <section id="lista-favoritos" class="grid-favoritos">
-
-            <!-- Ejemplo 1 -->
-            <article class="card-favorito" data-id="1">
-                <div class="card-img-box">
-                    <img src="img/pack romantico.webp" alt="Ramo de Rosas Rojas">
-                    <button type="button" class="btn-quitar-fav" title="Quitar de favoritos">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </button>
-                </div>
-                <div class="card-contenido">
-                    <span class="categoria-tag">Clásicos</span>
-                    <h3>Ramo de Rosas Rojas</h3>
-                    <p>Docena de rosas rojas frescas de tallo largo con follaje verde y envoltura artesanal.</p>
-                    <div class="card-pie">
-                        <span class="precio">$18.500</span>
-                        <a href="carrito.html" class="btn-carrito">
-                            <span class="material-symbols-outlined">shopping_bag</span>
-                            Agregar
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Ejemplo 2 -->
-            <article class="card-favorito" data-id="2">
-                <div class="card-img-box">
-                    <img src="img/girasol1.jpg" alt="Girasoles Radiantes">
-                    <button type="button" class="btn-quitar-fav" title="Quitar de favoritos">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </button>
-                </div>
-                <div class="card-contenido">
-                    <span class="categoria-tag">Temporada</span>
-                    <h3>Girasoles Radiantes</h3>
-                    <p>Arreglo de 6 girasoles grandes acompañados de flores silvestres de estación.</p>
-                    <div class="card-pie">
-                        <span class="precio">$14.000</span>
-                        <a href="carrito.html" class="btn-carrito">
-                            <span class="material-symbols-outlined">shopping_bag</span>
-                            Agregar
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Ejemplo 3 -->
-            <article class="card-favorito" data-id="3">
-                <div class="card-img-box">
-                    <img src="img/ramopri1.webp" alt="Bouquet Primaveral">
-                    <button type="button" class="btn-quitar-fav" title="Quitar de favoritos">
-                        <span class="material-symbols-outlined">favorite</span>
-                    </button>
-                </div>
-                <div class="card-contenido">
-                    <span class="categoria-tag">Edición Especial</span>
-                    <h3>Mix Primaveral Silvestre</h3>
-                    <p>Combinación colorida de astromelias, rosas pastel, fresias y eucalipto fresco.</p>
-                    <div class="card-pie">
-                        <span class="precio">$15.000</span>
-                        <a href="carrito.html" class="btn-carrito">
-                            <span class="material-symbols-outlined">shopping_bag</span>
-                            Agregar
-                        </a>
-                    </div>
-                </div>
-            </article>
-
         </section>
 
-        <!-- ESTADO VACÍO (Listo para mostrar cuando no haya registros en la BD) -->
+        <!-- ESTADO VACÍO -->
         <section id="favoritos-vacios" class="estado-vacio" style="display: none;">
             <span class="material-symbols-outlined icono-vacio">heart_broken</span>
             <h2>Aún no tienes favoritos guardados</h2>

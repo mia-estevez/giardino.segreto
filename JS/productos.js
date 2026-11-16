@@ -1,10 +1,15 @@
-
 const contenedorProductos = document.getElementById("contenedor-productos");
 
 const usuario = JSON.parse(localStorage.getItem("usuario"));
 
 // MOSTRAR PRODUCTOS
 async function mostrarProductos() {
+
+    if (!contenedorProductos) {
+        console.error("No se encontró el contenedor de productos");
+        return;
+    }
+
     try {
         const resultado = await fetch("http://localhost:3000/producto");
 
@@ -14,10 +19,11 @@ async function mostrarProductos() {
 
         const productos = await resultado.json();
 
-        // Consultar favoritos del usuario
+        // CONSULTAR FAVORITOS DEL USUARIO
         let favoritos = [];
 
         if (usuario && usuario.rol === "comprador") {
+
             const respuestaFavoritos = await fetch(
                 `http://localhost:3000/favoritos/${usuario.id}`
             );
@@ -40,7 +46,9 @@ async function mostrarProductos() {
             return;
         }
 
+        // RECORRER PRODUCTOS
         productos.forEach(producto => {
+
             const tarjeta = document.createElement("div");
             tarjeta.classList.add("card-variedad");
 
@@ -48,13 +56,16 @@ async function mostrarProductos() {
                 favorito => Number(favorito.id) === Number(producto.id)
             );
 
+            // BOTÓN FAVORITOS
             const botonFavorito = document.createElement("button");
+
             botonFavorito.type = "button";
             botonFavorito.classList.add("btn-fav-flotante");
             botonFavorito.title = "Guardar en favoritos";
 
             if (esFavorito) {
                 botonFavorito.classList.add("favorito-activo");
+                botonFavorito.title = "Quitar de favoritos";
             }
 
             botonFavorito.innerHTML = `
@@ -70,17 +81,22 @@ async function mostrarProductos() {
                 }
 
                 try {
+
                     if (botonFavorito.classList.contains("favorito-activo")) {
 
                         const respuesta = await fetch(
                             `http://localhost:3000/favoritos/${usuario.id}/${producto.id}`,
-                            { method: "DELETE" }
+                            {
+                                method: "DELETE"
+                            }
                         );
 
                         const datos = await respuesta.json();
 
                         if (!respuesta.ok) {
-                            throw new Error(datos.error || "No se pudo quitar el favorito");
+                            throw new Error(
+                                datos.error || "No se pudo quitar el favorito"
+                            );
                         }
 
                         botonFavorito.classList.remove("favorito-activo");
@@ -107,7 +123,9 @@ async function mostrarProductos() {
                         const datos = await respuesta.json();
 
                         if (!respuesta.ok) {
-                            throw new Error(datos.error || "No se pudo guardar el favorito");
+                            throw new Error(
+                                datos.error || "No se pudo guardar el favorito"
+                            );
                         }
 
                         botonFavorito.classList.add("favorito-activo");
@@ -122,6 +140,7 @@ async function mostrarProductos() {
                 }
             });
 
+            // CONTENIDO DE LA TARJETA
             const contenido = document.createElement("div");
 
             const icono = document.createElement("span");
@@ -139,10 +158,13 @@ async function mostrarProductos() {
 
             const precio = document.createElement("span");
             precio.classList.add("precio-producto");
-            precio.textContent = `$${Number(producto.precio).toLocaleString("es-AR")}`;
+
+            precio.textContent =
+                `$${Number(producto.precio).toLocaleString("es-AR")}`;
 
             const stock = document.createElement("span");
             stock.classList.add("stock-producto");
+
             stock.textContent = `${producto.stock} disponibles`;
 
             informacion.appendChild(precio);
@@ -153,11 +175,14 @@ async function mostrarProductos() {
             contenido.appendChild(descripcion);
             contenido.appendChild(informacion);
 
+            // BOTÓN CARRITO
             const botonCarrito = document.createElement("a");
+
             botonCarrito.href = "carrito.html";
             botonCarrito.classList.add("btn-consultar-chico");
             botonCarrito.textContent = "Agregar al Carrito";
 
+            // ARMAR TARJETA
             tarjeta.appendChild(botonFavorito);
             tarjeta.appendChild(contenido);
             tarjeta.appendChild(botonCarrito);
@@ -166,6 +191,7 @@ async function mostrarProductos() {
         });
 
     } catch (error) {
+
         console.error("Error al mostrar productos:", error);
 
         contenedorProductos.innerHTML = `
@@ -177,4 +203,5 @@ async function mostrarProductos() {
     }
 }
 
+// EJECUTAR
 mostrarProductos();
