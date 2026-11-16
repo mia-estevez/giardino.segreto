@@ -1,282 +1,321 @@
-.menu{
-    position: relative;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-body{
-    background-color: rgba(216, 121, 143, 0.18);
-    margin: 0%;
+
+body {
+    background-color: #fff6f8;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-input, textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
 
-header{
+/* --- HEADER Y LOGO UNIFICADOS --- */
+header {
+    position: sticky;
     top: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2%;
-    margin: 0%;
-    height: 4%;
-    background-color: rgb(231, 146, 175);
-    border-bottom: 2px solid rgb(216, 112, 147);
+    padding: 15px 5%;
+    background-color: #e792af;
+    border-bottom: 2px solid #d87093;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-.menu-toggle {
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
+.logo-texto {
     display: flex;
-    color: rgb(36, 32, 32);
-    justify-content: right;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.logo-texto:hover {
+    opacity: 0.9;
+}
+
+.logo-icono {
+    font-size: 2.2rem;
+    color: #fff0f5;
+}
+
+.logo-palabras {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+}
+
+.logo-subtitulo {
+    font-size: 0.65rem;
+    letter-spacing: 2.5px;
+    opacity: 0.9;
 }
 
 .menu {
+    position: relative;
+}
+
+.menu-toggle {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #242020;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: #d87093;
+    border-radius: 12px;
+    width: 210px;
+    padding: 10px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.menu:hover .submenu {
     display: block;
 }
 
-.nav-menu {
-    display: block;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: 100%;   
-    background: rgb(216, 112, 147);
-    border-radius: 10px;
-    width: 180px;
-    gap: 10px;
+.nav-menu, .nav-menu ul {
+    list-style: none;
 }
 
 .nav-menu li a {
     display: block;
-    padding: 10px;
-    color: rgb(250, 250, 250);
+    padding: 10px 20px;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.2s;
 }
 
 .nav-menu li a:hover {
-    background-color: rgba(240, 240, 200, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.menu:hover .submenu{
-    display: block;
-}
-
-.submenu{
-    display: none;
-}
-
-.li1{
-    list-style: none;
-}
-
-.li2{
- list-style: none;
- display: flex;
- flex-direction: row;   
-}
-
-span{
-    color: rgb(250, 250, 250);
-}
-
-h1{
-    font-size: 2rem;
-    letter-spacing: 4px;
+.li2 {
     display: flex;
-    justify-content: center;
-    color: rgb(250, 250, 250);
+    align-items: center;
+    padding-left: 15px;
+    color: white;
 }
 
-.titulo{
-    background-color: rgb(231, 146, 175);
-    border-radius: 30%;
-    border: rgb(216, 112, 147);
-    border-bottom: 2px solid rgb(216, 112, 147);
-    padding: 1% ;
-    margin: 1% auto;
-    width: clamp(100px, 300px, 500px);
+/* --- BANNER DE SECCIÓN --- */
+.banner-seccion {
+    background: linear-gradient(to bottom, #fce4ec, #fff6f8);
     text-align: center;
-    min-block-size: 50%;
+    padding: 45px 20px 25px 20px;
 }
 
-footer{
-    background-color: rgb(231, 146, 175);
-    color: rgb(250, 250, 250);
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
+.etiqueta-seccion {
+    display: inline-block;
+    background-color: #354a2f; /* Verde admin */
+    color: white;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-#foto {
-    max-height: 100px; 
-    width: auto;     
-    border-radius: 100%;
-    object-fit: contain;
-    border: 2px solid rgb(216, 112, 147);
+.banner-seccion h1 {
+    font-family: 'Playfair Display', serif;
+    color: #354a2f;
+    font-size: 2.4rem;
+    margin-bottom: 8px;
 }
 
+.banner-seccion p {
+    color: #666;
+    font-size: 0.95rem;
+}
 
-/* TABLA DE PRODUCTOS */
-
-.catalogo-productos {
-    width: 90%;
-    max-width: 1200px;
-    margin: 35px auto;
+/* --- CONTENEDOR PRINCIPAL --- */
+.contenedor-catalogo {
     flex: 1;
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto 60px auto;
+}
+
+.acciones-catalogo {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-principal {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e792af;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(231, 146, 175, 0.35);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-principal:hover {
+    background-color: #d17b88;
+    transform: translateY(-2px);
+}
+
+/* --- FORMULARIO CRUD --- */
+.formulario-producto {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    border-top: 5px solid #354a2f;
+    margin-bottom: 35px;
+}
+
+.formulario-producto h2 {
+    font-family: 'Playfair Display', serif;
+    color: #354a2f;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.campo-grupo {
+    margin-bottom: 15px;
+}
+
+.campo-grupo label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #c06c84;
+    margin-bottom: 5px;
+}
+
+.campo-grupo input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #f2cbd8;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    background-color: #fffbfc;
+    transition: border-color 0.3s;
+}
+
+.campo-grupo input:focus {
+    outline: none;
+    border-color: #e792af;
+    background-color: white;
+}
+
+.form-botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-guardar {
+    background-color: #354a2f;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-guardar:hover {
+    background-color: #273723;
+}
+
+.btn-cancelar {
+    background-color: #fce4ec;
+    color: #c06c84;
+    border: 1.5px solid #f2cbd8;
+    padding: 11px 22px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-cancelar:hover {
+    background-color: #e792af;
+    color: white;
+}
+
+/* --- TABLA DE PRODUCTOS --- */
+.catalogo-productos {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    border-top: 5px solid #e792af;
 }
 
 .catalogo-productos h2 {
-    color: rgb(117, 66, 31);
-    text-align: center;
-    font-family: Georgia, serif;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+    color: #354a2f;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
 .tabla-contenedor {
-    width: 100%;
     overflow-x: auto;
-    background-color: rgb(255, 250, 250);
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
 }
 
 .tabla-productos {
     width: 100%;
     border-collapse: collapse;
-    text-align: center;
-}
-
-.tabla-productos thead {
-    background-color: rgb(231, 146, 175);
-    color: rgb(250, 250, 250);
+    text-align: left;
 }
 
 .tabla-productos th {
-    padding: 15px;
-    font-family: Georgia, serif;
-    letter-spacing: 1px;
+    background-color: #fce4ec;
+    color: #354a2f;
+    padding: 12px 15px;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 .tabla-productos td {
-    padding: 13px;
-    color: rgb(117, 66, 31);
-    border-bottom: 1px solid rgb(240, 205, 215);
+    padding: 12px 15px;
+    border-bottom: 1px solid #fce4ec;
+    color: #555;
+    font-size: 0.92rem;
 }
 
-.tabla-productos tbody tr:hover {
-    background-color: rgba(231, 146, 175, 0.15);
+.tabla-productos tr:hover td {
+    background-color: #fff9fa;
 }
 
-/* BOTONES DE ACCIONES */
-
-.btn-editar {
-    background-color: rgb(231, 146, 175);
+/* --- FOOTER --- */
+footer {
+    background-color: #e792af;
     color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin: 3px;
-}
-
-.btn-eliminar {
-    background-color: rgb(117, 66, 66);
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin: 3px;
-}
-
-.btn-editar:hover,
-.btn-eliminar:hover {
-    opacity: 0.8;
-}
-
-/* DISEÑO RESPONSIVE */
-
-@media (max-width: 768px) {
-    .catalogo-productos {
-        width: 95%;
-    }
-
-    .tabla-productos {
-        min-width: 650px;
-    }
-}
-/* BOTÓN AGREGAR PRODUCTO */
-
-.acciones-catalogo {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: flex-end;
-}
-
-#btn-mostrar-formulario {
-    background-color: rgb(216, 112, 147);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* FORMULARIO */
-
-.formulario-producto {
-    width: 90%;
-    max-width: 450px;
-    margin: 20px auto;
-    padding: 25px;
-    background-color: rgb(255, 250, 250);
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
-}
-
-.formulario-producto h2 {
     text-align: center;
-    color: rgb(117, 66, 31);
-}
-
-.formulario-producto label {
-    display: block;
-    margin-bottom: 5px;
-    color: rgb(117, 66, 31);
-}
-
-.formulario-producto input {
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid rgb(216, 112, 147);
-    border-radius: 6px;
-}
-
-.formulario-producto button {
-    background-color: rgb(231, 146, 175);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin: 4px;
+    padding: 20px;
+    margin-top: auto;
 }

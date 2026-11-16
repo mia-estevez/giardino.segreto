@@ -13,7 +13,7 @@ body {
     flex-direction: column;
 }
 
-/* --- HEADER Y LOGO (Idénticos al resto del sitio) --- */
+/* --- HEADER Y LOGO --- */
 header {
     position: sticky;
     top: 0;
@@ -21,7 +21,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 5%;
+    padding: 15px 5%;
     background-color: #e792af;
     border-bottom: 2px solid #d87093;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -255,7 +255,7 @@ header {
     transform: scale(1.15);
 }
 
-/* --- RESUMEN DE COMPRA (ASIDE) --- */
+/* --- RESUMEN DE COMPRA --- */
 .carrito-resumen {
     background: white;
     border-radius: 20px;
@@ -332,39 +332,60 @@ header {
     color: #354a2f;
 }
 
-/* --- ESTADO VACÍO --- */
-.estado-vacio {
+/* --- ESTILOS CHECKOUT Y COMPROBANTE --- */
+.seccion-checkout, .seccion-comprobante {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.checkout-card, .ticket-card {
     background: white;
+    padding: 35px;
     border-radius: 24px;
-    padding: 55px 25px;
-    text-align: center;
-    max-width: 520px;
-    margin: 30px auto;
-    box-shadow: 0 8px 25px rgba(216, 112, 147, 0.12);
-    border-top: 5px solid #e792af;
+    box-shadow: 0 8px 25px rgba(216, 112, 147, 0.15);
+    border-top: 6px solid #e792af;
 }
 
-.icono-vacio {
-    font-size: 3.5rem;
-    color: #e792af;
-    background-color: #fff0f5;
-    padding: 18px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.estado-vacio h2 {
+.checkout-card h2, .ticket-header h2 {
     font-family: 'Playfair Display', serif;
     color: #354a2f;
     font-size: 1.8rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.estado-vacio p {
+.checkout-card p, .ticket-header p {
     color: #666;
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
     margin-bottom: 25px;
+}
+
+.campo-grupo {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.campo-grupo label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #c06c84;
+    margin-bottom: 6px;
+}
+
+.campo-grupo input, .campo-grupo select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #f2cbd8;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    background-color: #fffbfc;
+}
+
+.form-botones-checkout, .ticket-botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
 }
 
 .btn-principal {
@@ -375,11 +396,96 @@ header {
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
     transition: background 0.3s;
 }
 
 .btn-principal:hover {
     background-color: #d17b88;
+}
+
+.btn-cancelar-checkout {
+    background-color: #fce4ec;
+    color: #c06c84;
+    border: 1.5px solid #f2cbd8;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.btn-cancelar-checkout:hover {
+    background-color: #e792af;
+    color: white;
+}
+
+/* Comprobante / Ticket */
+.ticket-header {
+    text-align: center;
+    border-bottom: 2px solid #fce4ec;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.ticket-icono {
+    font-size: 3rem;
+    color: #354a2f;
+    background-color: #f1f6f0;
+    padding: 12px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.ticket-info-cliente {
+    background-color: #fff6f8;
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.ticket-productos {
+    margin-bottom: 20px;
+}
+
+.ticket-productos h4 {
+    color: #354a2f;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.ticket-productos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ticket-productos li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #f2cbd8;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.ticket-total-final {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #354a2f;
+    border-top: 2px solid #354a2f;
+    padding-top: 15px;
+    margin-bottom: 25px;
 }
 
 /* --- FOOTER --- */
