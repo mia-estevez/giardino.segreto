@@ -5,43 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giardino Segreto - Florería Artesanal</title>
     <link rel="stylesheet" href="CSS/index.css">
+
     <!-- Fuentes e íconos de Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- Menú dinámico según el rol -->
+   <script src="JS/menu.js" defer></script>
 </head>
 <body>
-
-    <header>
-        <a href="index.html" class="logo-texto">
-            <span class="material-symbols-outlined logo-icono">local_florist</span>
-            <div class="logo-palabras">
-                <span class="logo-titulo">Giardino Segreto</span>
-                <span class="logo-subtitulo">FLORERÍA ARTESANAL</span>
-            </div>
-        </a>
-
-        <nav class="menu">
-            <div class="botontres">
-                <button class="menu-toggle">&#9776;</button>
-            </div>
-            <div class="submenu">
-                <ul class="nav-menu">
-                    <li class="li1"><a href="index.html">Nosotros</a>
-                        <ul>
-                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="cuidados.html">Cuidados</a></li>
-                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="asesoramiento.html">Asesoramiento</a></li>
-                        </ul>
-                    </li>
-                    <li class="li1"><a href="registrarse.html">Registrarse</a></li>
-                    <li class="li1"><a href="login.html">Login</a></li>
-                    <li class="li1"><a href="productos.html">Productos</a></li>
-                    <li class="li1"><a href="favoritos.html">Favoritos</a></li>
-                    <li class="li1"><a href="catalogo.html">Catálogo</a></li>
-                    <li class="li1"><a href="carrito.html">Carrito</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
     <!-- 1. PORTADA PRINCIPAL (HERO BANNER) -->
     <section class="hero">
@@ -63,11 +35,13 @@
             <h4>Flores Frescas</h4>
             <p>Seleccionadas cada mañana</p>
         </div>
+
         <div class="beneficio-item">
             <span class="material-symbols-outlined">volunteer_activism</span>
             <h4>Diseño Artesanal</h4>
             <p>Ramos hechos a medida</p>
         </div>
+
         <div class="beneficio-item">
             <span class="material-symbols-outlined">local_shipping</span>
             <h4>Envíos Cuidados</h4>
@@ -75,7 +49,7 @@
         </div>
     </section>
 
-    <!-- 3. QUIÉNES SOMOS Y OBJETIVOS (En 2 columnas elegantes) -->
+    <!-- 3. QUIÉNES SOMOS Y OBJETIVOS -->
     <section class="info-grid">
         <div class="tarjeta-info">
             <span class="material-symbols-outlined icono-tarjeta">spa</span>
@@ -93,6 +67,7 @@
     <!-- 4. ARREGLOS DESTACADOS -->
     <section class="destacados">
         <h2>Nuestros Favoritos de Temporada</h2>
+
         <div class="galeria-cards">
             <div class="card-flor">
                 <img src="img/rosarosalamaravillosa.png" alt="Ramo de Rosas">

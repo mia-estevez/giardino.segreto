@@ -526,3 +526,134 @@ footer {
 .btn-consultar-chico:hover {
     background-color: #d17b88;
 }
+
+
+/* --- TARJETAS DE PRODUCTOS DINÁMICOS --- */
+
+.card-variedad {
+    position: relative;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 22px;
+    border-bottom: 4px solid #f2c4d3;
+    box-shadow: 0 6px 18px rgba(216, 112, 147, 0.12);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-variedad:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(216, 112, 147, 0.18);
+}
+
+.card-variedad > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-variedad .emoji-flor {
+    font-size: 2.3rem;
+    margin-bottom: 18px;
+}
+
+.card-variedad h3 {
+    font-family: 'Playfair Display', serif;
+    color: #354a2f;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.card-variedad p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 3px;
+}
+
+.btn-fav-flotante {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #f2c4d3;
+    border-radius: 50%;
+    background: #fff9fb;
+    color: #e77b9e;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-fav-flotante:hover {
+    background: #ffe5ee;
+}
+
+.btn-consultar-chico {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background: #e98eae;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.btn-consultar-chico:hover {
+    background: #d87093;
+}
+
+.mensaje-productos {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+/* --- INFORMACIÓN DEL PRODUCTO --- */
+
+.info-producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.precio-producto {
+    color: #b65d7c;
+    background-color: #fff0f5;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.stock-producto {
+    color: #71816b;
+    background-color: #f2f6ef;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+/* Corazón cuando el producto está guardado */
+.btn-fav-flotante.favorito-activo {
+    background-color: #e792af;
+    color: white;
+    border-color: #e792af;
+}
+
+.btn-fav-flotante.favorito-activo span {
+    font-variation-settings: 'FILL' 1;
+}

@@ -61,6 +61,7 @@ header {
     opacity: 0.9;
 }
 
+/* --- MENÚ --- */
 .menu {
     position: relative;
 }
@@ -80,16 +81,18 @@ header {
     top: 100%;
     background: #d87093;
     border-radius: 12px;
-    width: 210px;
+    width: 230px;
     padding: 10px 0;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
 }
 
 .menu:hover .submenu {
     display: block;
 }
 
-.nav-menu, .nav-menu ul {
+.nav-menu,
+.nav-menu ul {
     list-style: none;
 }
 
@@ -99,11 +102,17 @@ header {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1rem;
     transition: background 0.2s;
 }
 
 .nav-menu li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Submenú de Nosotros */
+.nav-menu > li {
+    width: 100%;
 }
 
 .li2 {
@@ -113,11 +122,57 @@ header {
     color: white;
 }
 
+.li2 .material-symbols-outlined {
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.li2 a {
+    padding: 8px 12px !important;
+    flex: 1;
+}
+
+/* Nombre del usuario */
+.usuario-menu {
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    margin-top: 5px;
+}
+
+.usuario-nombre {
+    display: block;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Botón cerrar sesión */
+.cerrar-sesion {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 5px 20px 10px;
+    padding: 9px 12px;
+    background-color: #fff0f5;
+    color: #a94f70;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cerrar-sesion:hover {
+    background-color: #ffffff;
+    color: #d87093;
+}
+
 /* --- HERO BANNER (PORTADA) --- */
 .hero {
-    /* Fondo degradado + imagen floral suave */
-    background: linear-gradient(rgba(53, 74, 47, 0.65), rgba(216, 112, 147, 0.65)),
-                url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    background:
+        linear-gradient(rgba(53, 74, 47, 0.65), rgba(216, 112, 147, 0.65)),
+        url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
     min-height: 75vh;
     display: flex;
     align-items: center;
@@ -204,7 +259,7 @@ header {
     background-color: white;
     width: 85%;
     max-width: 1100px;
-    margin: -40px auto 50px auto; /* Sube ligeramente sobre el banner */
+    margin: -40px auto 50px auto;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(216, 112, 147, 0.15);
@@ -220,7 +275,7 @@ header {
 
 .beneficio-item span {
     font-size: 2.2rem;
-    color: #354a2f; /* Verde del logo */
+    color: #354a2f;
     margin-bottom: 8px;
 }
 

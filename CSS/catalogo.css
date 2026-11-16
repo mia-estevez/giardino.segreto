@@ -319,3 +319,47 @@ footer {
     padding: 20px;
     margin-top: auto;
 }
+
+
+/* --- BOTONES DE ACCIONES DEL CATÁLOGO --- */
+
+.btn-editar,
+.btn-eliminar {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 3px;
+}
+
+/* Botón editar */
+.btn-editar {
+    background-color: #fce5ed;
+    color: #b65d7c;
+}
+
+.btn-editar:hover {
+    background-color: #f5cbd9;
+    transform: translateY(-2px);
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+    background-color: #f8e8e8;
+    color: #b65b5b;
+}
+
+.btn-eliminar:hover {
+    background-color: #efcece;
+    transform: translateY(-2px);
+}
+
+/* Alinear los botones */
+.tabla-productos td:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
