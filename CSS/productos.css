@@ -657,3 +657,32 @@ footer {
 .btn-fav-flotante.favorito-activo span {
     font-variation-settings: 'FILL' 1;
 }
+
+/* Correcciones de estilos de productos */
+
+.banner-seccion {
+    background: linear-gradient(to bottom, #fce4ec, #fff6f8);
+    text-align: center;
+    padding: 55px 20px 30px;
+}
+
+.banner-seccion h1 {
+    font-family: 'Playfair Display', serif;
+    color: #354a2f;
+    font-size: 2.7rem;
+    margin-bottom: 12px;
+}
+
+.banner-seccion p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #666;
+    font-size: 1.05rem;
+}
+
+/* Evitar que el CSS anterior interfiera con el navbar */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
