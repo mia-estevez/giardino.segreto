@@ -496,3 +496,42 @@ footer {
     padding: 20px;
     margin-top: auto;
 }
+
+/* ==========================================================
+   REGLAS ESPECIALES PARA IMPRESIÓN / DESCARGA A PDF
+   ========================================================== */
+@media print {
+    /* Ocultar todo lo que tenga la clase .no-imprimir */
+    .no-imprimir {
+        display: none !important;
+    }
+
+    /* Asegurar que el fondo del cuerpo sea blanco puro para el ticket */
+    body {
+        background-color: white !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Centrar y expandir el ticket para que ocupe toda la hoja limpia */
+    .seccion-comprobante {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .ticket-card {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Quitar bordes de colores muy fuertes y asegurar contraste en papel */
+    .ticket-info-cliente {
+        background-color: #f9f9f9 !important;
+        border: 1px solid #ddd !important;
+    }
+}
