@@ -13,7 +13,7 @@ body {
     flex-direction: column;
 }
 
-/* --- HEADER Y LOGO (Idénticos al resto del sitio) --- */
+/* --- HEADER Y LOGO --- */
 header {
     position: sticky;
     top: 0;
@@ -21,7 +21,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 5%;
+    padding: 15px 5%;
     background-color: #e792af;
     border-bottom: 2px solid #d87093;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -116,7 +116,7 @@ header {
     color: white;
 }
 
-/* --- TARJETA DE REGISTRO --- */
+/* --- TARJETA DE REGISTRO / LOGIN --- */
 .contenedor-registro {
     flex: 1;
     display: flex;
@@ -237,7 +237,7 @@ header {
     border-color: #e792af;
 }
 
-/* Botón Enviar */
+/* Botón Enviar / Ingresar */
 .enviar {
     width: 100%;
     padding: 14px;
@@ -266,4 +266,5 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    margin-top: auto;
 }
