@@ -1,72 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giardino Segreto</title>
+    <title>Giardino Segreto - Florería Artesanal</title>
     <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=deceased" />
+    <!-- Fuentes e íconos de Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
+
     <header>
-        <img id="foto" src="img/logo verde.jpg" alt="Logo" />
+        <a href="index.html" class="logo-texto">
+            <span class="material-symbols-outlined logo-icono">local_florist</span>
+            <div class="logo-palabras">
+                <span class="logo-titulo">Giardino Segreto</span>
+                <span class="logo-subtitulo">FLORERÍA ARTESANAL</span>
+            </div>
+        </a>
 
         <nav class="menu">
-
             <div class="botontres">
                 <button class="menu-toggle">&#9776;</button>
             </div>
             <div class="submenu">
                 <ul class="nav-menu">
-                    <li class="li1"><a href="index.html">Nosotros</a><ul>
-                        <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="cuidados.html">Cuidados</a></li>
-                        <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="asesoramiento.html">Asesoramiento</a></li>
-                    </ul></li>
+                    <li class="li1"><a href="index.html">Nosotros</a>
+                        <ul>
+                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="cuidados.html">Cuidados</a></li>
+                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="asesoramiento.html">Asesoramiento</a></li>
+                        </ul>
+                    </li>
                     <li class="li1"><a href="registrarse.html">Registrarse</a></li>
-                    <li class="li1"><a href="productos.html">Productos</a></li>
+                    <li class="li1"><a href="productos.html">Productos</a>
+                        <ul>
+                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="promo.html">Promo</a></li>
+                            <li class="li2"><span class="material-symbols-outlined">deceased</span><a href="especial.html">Ediciones especiales</a></li>
+                        </ul>
+                    </li>
                     <li class="li1"><a href="favoritos.html">Favoritos</a></li>
-                    <li class="li1"><a href="catalogo.html">Catalogo</a></li>
+                    <li class="li1"><a href="catalogo.php">Catálogo</a></li>
                     <li class="li1"><a href="carrito.html">Carrito</a></li>
                 </ul>
-            </div>  
-       </nav>
+            </div>
+        </nav>
     </header>
-    <div class="titulo">
-      <h1>BIENVENIDOS!</h1>
-    </div>
-    
 
-    <section id="objetivos" class="objetivos">
-        <div class="objetivos-contenido">
-            <p>
-                En Giardino Segreto creemos que cada flor cuenta una historia. Somos una florería dedicada a crear arreglos florales únicos, combinando belleza, frescura y creatividad para acompañar los momentos más importantes de nuestros clientes.
-            <p>
-               Trabajamos con flores seleccionadas cuidadosamente para ofrecer productos de calidad, desde ramos y centros de mesa hasta decoraciones para eventos especiales.
-            </p>
-
-            <p>
-                Nuestro compromiso es transmitir emociones a través de la naturaleza, brindando atención personalizada y diseños que reflejen el estilo y los sentimientos de cada persona.
-            </p>
+    <!-- 1. PORTADA PRINCIPAL (HERO BANNER) -->
+    <section class="hero">
+        <div class="hero-contenido">
+            <span class="subtitulo-hero">BIENVENIDOS A GIARDINO SEGRETO</span>
+            <h1>Cada flor cuenta una historia inolvidable</h1>
+            <p>Creamos arreglos florales únicos combinando frescura, arte y naturaleza para acompañar tus momentos más especiales.</p>
+            <div class="hero-botones">
+                <a href="catalogo.php" class="btn-principal">Ver Catálogo</a>
+                <a href="asesoramiento.html" class="btn-secundario">Asesoramiento</a>
+            </div>
         </div>
     </section>
 
-    <section id="objetivos" class="objetivos">
-        <div class="objetivos-contenido">
-            <p>
-                Nuestro principal objetivo es acercar la belleza de las flores a cada hogar, creando experiencias memorables a través de arreglos florales originales y de alta calidad.
-            </p>
-
-            <p>
-               Buscamos ofrecer un servicio confiable y personalizado, adaptándonos a las necesidades de nuestros clientes para cada ocasión, ya sea un regalo, una celebración o un evento especial.
-            </p>
-
-            <p>
-                Además, promovemos el cuidado de la naturaleza y el uso responsable de los recursos, fomentando una conexión más cercana entre las personas y el mundo natural.
-            </p>
+    <!-- 2. BARRA DE BENEFICIOS -->
+    <section class="beneficios">
+        <div class="beneficio-item">
+            <span class="material-symbols-outlined">local_florist</span>
+            <h4>Flores Frescas</h4>
+            <p>Seleccionadas cada mañana</p>
+        </div>
+        <div class="beneficio-item">
+            <span class="material-symbols-outlined">volunteer_activism</span>
+            <h4>Diseño Artesanal</h4>
+            <p>Ramos hechos a medida</p>
+        </div>
+        <div class="beneficio-item">
+            <span class="material-symbols-outlined">local_shipping</span>
+            <h4>Envíos Cuidados</h4>
+            <p>Entregas en el día</p>
         </div>
     </section>
+
+    <!-- 3. QUIÉNES SOMOS Y OBJETIVOS (En 2 columnas elegantes) -->
+    <section class="info-grid">
+        <div class="tarjeta-info">
+            <span class="material-symbols-outlined icono-tarjeta">spa</span>
+            <h2>Nuestra Esencia</h2>
+            <p>Somos una florería dedicada a crear arreglos florales únicos, combinando belleza, frescura y creatividad. Trabajamos con flores seleccionadas cuidadosamente para ofrecer desde ramos delicados hasta decoraciones para eventos especiales.</p>
+        </div>
+
+        <div class="tarjeta-info">
+            <span class="material-symbols-outlined icono-tarjeta">eco</span>
+            <h2>Nuestros Objetivos</h2>
+            <p>Buscamos acercar la belleza natural a cada hogar creando experiencias memorables. Brindamos un servicio confiable y personalizado, promoviendo el cuidado de la naturaleza y el uso responsable de los recursos.</p>
+        </div>
+    </section>
+
+    <!-- 4. ARREGLOS DESTACADOS -->
+    <section class="destacados">
+        <h2>Nuestros Favoritos de Temporada</h2>
+        <div class="galeria-cards">
+            <div class="card-flor">
+                <img src="img/rosarosalamaravillosa.png" alt="Ramo de Rosas">
+                <div class="card-texto">
+                    <h3>Rosas Clásicas</h3>
+                    <p>Elegancia atemporal para expresar tus sentimientos.</p>
+                    <a href="catalogo.php">Explorar &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card-flor">
+                <img src="img/gira.avif" alt="Girasoles">
+                <div class="card-texto">
+                    <h3>Girasoles Radiantes</h3>
+                    <p>Energía, luz y alegría en cada pétalo.</p>
+                    <a href="catalogo.php">Explorar &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card-flor">
+                <img src="img/tulip-ip-ip.png" alt="Tulipanes">
+                <div class="card-texto">
+                    <h3>Bouquet de Tulipanes</h3>
+                    <p>Delicadeza primaveral en tonos suaves.</p>
+                    <a href="catalogo.php">Explorar &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2026 Giardino Segreto. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
